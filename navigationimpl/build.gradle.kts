@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -33,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kapt{
+        generateStubs = true
+    }
 }
 
 dependencies {
@@ -45,4 +50,20 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.androidx.navigation.fragment.ktx.v253)
+    implementation(libs.androidx.navigation.ui.ktx.v253)
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
+    kaptAndroidTest(libs.dagger.compiler)
+    annotationProcessor(libs.dagger.compiler)
+    kapt(libs.google.dagger.android.processor)
+    annotationProcessor(libs.google.dagger.android.processor)
+
+
+    api(project(":navigationapi"))
+    implementation(project(":di"))
+
+    implementation(project(":Authorization"))
+
 }

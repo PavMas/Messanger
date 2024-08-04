@@ -55,8 +55,8 @@ dependencies {
     kapt(libs.dagger.compiler)
 
     implementation(project(":di"))
-//    implementation project(":navigationimpl")
-//    implementation project(":feature1")
+    implementation(project(":navigationimpl"))
+    implementation(project(":Authorization"))
 //    implementation project(":feature2")
 //    implementation project(":feature3")
 }

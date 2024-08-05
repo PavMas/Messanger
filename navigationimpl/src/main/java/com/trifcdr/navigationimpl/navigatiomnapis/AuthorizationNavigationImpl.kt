@@ -1,6 +1,7 @@
 package com.trifcdr.navigationimpl.navigatiomnapis
 
 import androidx.navigation.NavController
+import com.trifcdr.authorization.AuthorizationFragmentDirections
 import com.trifcdr.authorization.navigation.AuthorizationDirections
 import com.trifcdr.navigationapi.NavigationApi
 import javax.inject.Inject
@@ -14,7 +15,7 @@ class AuthorizationNavigationImpl @Inject constructor(
         when (direction) {
             AuthorizationDirections.ToRegistration -> {
                 navController.get().navigate(
-                    AuthorizationFragmentDirections.fromFeature1ToFeature2()
+                    AuthorizationFragmentDirections.fromAuthToRegister()
                 )
             }
         }

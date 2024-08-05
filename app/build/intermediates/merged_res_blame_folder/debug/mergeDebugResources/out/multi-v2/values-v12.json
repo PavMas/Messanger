@@ -4,7 +4,7 @@
             "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-47:/values-v12/values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\18975b1323fe49580c3653cb1ccd6495\\transformed\\appcompat-v7-25.0.0\\res\\values-v12\\values-v12.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\eada798e9ca45adca2c8dfcc02b758ff\\transformed\\appcompat-v7-25.0.0\\res\\values-v12\\values-v12.xml",
                     "from": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",

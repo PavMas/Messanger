@@ -1,7 +1,9 @@
 R_DEF: Internal format may change without notice
 local
 id feature1Fragment
+id from_auth_to_register
 id nav_graph
 id nav_host
+id registrationFragment
 layout fragment_navigation
 navigation nav_graph

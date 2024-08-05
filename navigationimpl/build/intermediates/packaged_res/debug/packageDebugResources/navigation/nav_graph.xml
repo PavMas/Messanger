@@ -6,19 +6,19 @@
     <fragment
         android:id="@+id/feature1Fragment"
         android:name="com.trifcdr.authorization.AuthorizationFragment"
-        android:label="Feature1Fragment"
+        android:label="AuthorizationFragment"
         tools:layout="@layout/fragment_authorization">
+        <action
+            android:id="@+id/from_auth_to_register"
+            app:destination="@id/registrationFragment" />
     </fragment>
 
-<!--    <fragment-->
-<!--        android:id="@+id/feature2Fragment"-->
-<!--        android:name="ai.doubletapp.sample.navigation.feature2.Feature2Fragment"-->
-<!--        android:label="Feature2Fragment"-->
-<!--        tools:layout="@layout/fragment_feature2">-->
-<!--        <action-->
-<!--            android:id="@+id/from_feature2_to_feature3"-->
-<!--            app:destination="@id/feature3Fragment" />-->
-<!--    </fragment>-->
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.trifcdr.registration.RegistrationFragment"
+        android:label="RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+    </fragment>
 
 <!--    <fragment-->
 <!--        android:id="@+id/feature3Fragment"-->

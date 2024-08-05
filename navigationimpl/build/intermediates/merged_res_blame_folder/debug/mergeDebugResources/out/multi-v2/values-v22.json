@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-47:/values-v22/values-v22.xml",
+            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-48:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\24dbee958c73ea1eddbb3fd039fcb29d\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\b50d7a398a226591bd3758ef14d1473e\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

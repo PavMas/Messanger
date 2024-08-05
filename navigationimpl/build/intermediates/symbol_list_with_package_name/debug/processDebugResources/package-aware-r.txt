@@ -3241,7 +3241,9 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id button
+id buttonBack
 id buttonPanel
+id buttonToFeature3
 id cache_measures
 id callMeasure
 id cancel_action
@@ -3343,6 +3345,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id from_auth_to_register
 id frost
 id fullscreen_header
 id ghost_view
@@ -3511,6 +3514,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registrationFragment
 id report_drawn
 id reverseSawtooth
 id right
@@ -3787,6 +3791,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_authorization
 layout fragment_navigation
+layout fragment_registration
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog

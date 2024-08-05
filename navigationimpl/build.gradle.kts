@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.utils.immutableMapBuilder
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -5,20 +7,16 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id ("kotlin-kapt")
 }
-apply(plugin = "kotlin-kapt")
 
 android {
     namespace = "com.trifcdr.navigationimpl"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.trifcdr.navigationimpl"
         minSdk = 26
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -38,7 +36,6 @@ android {
         jvmTarget = "1.8"
     }
     kapt{
-        generateStubs = true
         correctErrorTypes = true
 
     }
@@ -69,5 +66,6 @@ dependencies {
     api(project(":navigationapi"))
     implementation(project(":di"))
     implementation(project(":Authorization"))
+    implementation(project(":Registration"))
 
 }

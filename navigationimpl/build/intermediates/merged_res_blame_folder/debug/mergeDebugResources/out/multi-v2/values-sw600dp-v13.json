@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-46:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-47:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\c7cad9aadc4e44466cec7b1573136050\\transformed\\material-1.11.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\2d8690ed6e653cf8620fabef8b3dfe1f\\transformed\\material-1.11.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\519e59e153253cd2cc6214aede862626\\transformed\\appcompat-1.6.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\24dbee958c73ea1eddbb3fd039fcb29d\\transformed\\appcompat-1.6.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

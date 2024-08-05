@@ -8,6 +8,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.trifcdr.navigationimpl.databinding.FragmentNavigationBinding
 
 class NavigationFragment : Fragment() {
 

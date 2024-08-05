@@ -1,13 +1,7 @@
 R_DEF: Internal format may change without notice
 local
-color black
-color white
-drawable ic_launcher_background
-drawable ic_launcher_foreground
-id main
+id feature1Fragment
+id nav_graph
+id nav_host
 layout fragment_navigation
-mipmap ic_launcher
-mipmap ic_launcher_round
-string app_name
-style Base.Theme.Messanger
-style Theme.Messanger
+navigation nav_graph

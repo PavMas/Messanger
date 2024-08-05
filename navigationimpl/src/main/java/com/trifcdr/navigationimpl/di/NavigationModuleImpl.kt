@@ -27,7 +27,7 @@ internal class NavigationModuleImpl {
     interface Binder {
 
         @Binds
-        fun bindFeature1NavigationApi(api: AuthorizationNavigationImpl): NavigationApi<AuthorizationDirections>
+        fun bindAuthorizationNavigationApi(api: AuthorizationNavigationImpl): NavigationApi<AuthorizationDirections>
 
 //        @Binds
 //        fun bindFeature2NavigationApi(api: Feature2NavigationImpl): NavigationApi<Feature2Directions>

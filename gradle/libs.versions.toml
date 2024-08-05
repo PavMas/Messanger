@@ -5,8 +5,12 @@ androidxCoreKtx = "1.13.1"
 appcompatVersion = "1.6.0"
 coreKtxVersion = "1.9.0"
 dagger = "2.51"
+daggerAndroidProcessor = "2.24"
 daggerAndroidProcessorVersion = "2.15"
+daggerAndroidSupport = "2.24"
 googleMaterial = "1.12.0"
+javaxInjectVersion = "1"
+jsr250ApiVersion = "1.0"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -33,9 +37,14 @@ androidx-navigation-fragment-ktx-v253 = { module = "androidx.navigation:navigati
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationUiKtx" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-navigation-ui-ktx-v253 = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtxVersion" }
+annotation-jsr250-api = { module = "javax.annotation:jsr250-api", version.ref = "jsr250ApiVersion" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "daggerAndroidSupport" }
+dagger-android-processor-v224 = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerAndroidProcessor" }
+dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "daggerAndroidSupport" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 google-dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerAndroidProcessorVersion" }
+inject-javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInjectVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

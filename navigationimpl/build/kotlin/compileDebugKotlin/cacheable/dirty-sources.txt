@@ -1,0 +1,9 @@
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\di\NavigationComponentHolderImpl.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\di\NavigationModuleImpl.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\di\NavigationApiImpl.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\NavigationFragment.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\NavigationActivityProvider.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\di\NavigationComponentImpl.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\navigatiomnapis\AuthorizationNavigationImpl.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\NavigationActivity.kt
+C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\src\main\java\com\trifcdr\navigationimpl\di\NavigationDependenciesImpl.kt

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-46:/values-ta/values-ta.xml",
+            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-47:/values-ta/values-ta.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\12d706c78ca6061166ba588e5c1f589e\\transformed\\core-1.12.0\\res\\values-ta\\values-ta.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\7434a1196d5f46cbe73806ef9dab5bf9\\transformed\\core-1.12.0\\res\\values-ta\\values-ta.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\ef84f193bbcdb51bd59d8e2e15572b81\\transformed\\navigation-ui-2.5.3\\res\\values-ta\\values-ta.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\35b84eb7ad2633551a6d8d3b97734ec7\\transformed\\navigation-ui-2.5.3\\res\\values-ta\\values-ta.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\c7cad9aadc4e44466cec7b1573136050\\transformed\\material-1.11.0\\res\\values-ta\\values-ta.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\2d8690ed6e653cf8620fabef8b3dfe1f\\transformed\\material-1.11.0\\res\\values-ta\\values-ta.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\519e59e153253cd2cc6214aede862626\\transformed\\appcompat-1.6.1\\res\\values-ta\\values-ta.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\24dbee958c73ea1eddbb3fd039fcb29d\\transformed\\appcompat-1.6.1\\res\\values-ta\\values-ta.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

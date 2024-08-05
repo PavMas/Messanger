@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id ("kotlin-kapt")
+
 }
 
 android {
@@ -31,6 +32,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    kapt {
+        generateStubs = true
+    }
+    buildFeatures{
+        viewBinding = true
+    }
+
 }
 
 dependencies {
@@ -42,8 +51,19 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.dagger)
+    api(libs.dagger)
+    api(libs.dagger.android)
+    api(libs.dagger.android.support)
+
+    annotationProcessor(libs.dagger.compiler)
     kapt(libs.dagger.compiler)
+
+    annotationProcessor(libs.dagger.android.processor.v224)
+    kapt(libs.dagger.android.processor.v224)
+
+    compileOnly(libs.annotation.jsr250.api)
+    implementation(libs.inject.javax.inject)
+
 
     implementation(project(":di"))
     implementation(project(":navigationapi"))

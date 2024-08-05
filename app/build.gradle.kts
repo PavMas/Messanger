@@ -34,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kapt {
+        generateStubs = true
+    }
+
 }
 
 dependencies {
@@ -51,8 +55,8 @@ dependencies {
     implementation(libs.androidx.appcompat.v160)
     implementation(libs.material.v180)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.dagger)
-    kapt(libs.dagger.compiler)
+    implementation("com.google.dagger:dagger:2.44")
+    kapt("com.google.dagger:dagger-compiler:2.44")
 
     implementation(project(":di"))
     implementation(project(":navigationimpl"))

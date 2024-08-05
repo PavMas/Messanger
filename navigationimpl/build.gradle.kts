@@ -1,9 +1,11 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("kotlin-kapt")
+    id("org.jetbrains.kotlin.kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-kapt")
 }
+apply(plugin = "kotlin-kapt")
 
 android {
     namespace = "com.trifcdr.navigationimpl"
@@ -37,6 +39,11 @@ android {
     }
     kapt{
         generateStubs = true
+        correctErrorTypes = true
+
+    }
+    buildFeatures{
+        viewBinding = true
     }
 }
 
@@ -54,16 +61,13 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx.v253)
     implementation(libs.androidx.navigation.ui.ktx.v253)
     implementation(libs.dagger)
+
     kapt(libs.dagger.compiler)
-    kaptAndroidTest(libs.dagger.compiler)
     annotationProcessor(libs.dagger.compiler)
-    kapt(libs.google.dagger.android.processor)
-    annotationProcessor(libs.google.dagger.android.processor)
 
 
     api(project(":navigationapi"))
     implementation(project(":di"))
-
     implementation(project(":Authorization"))
 
 }

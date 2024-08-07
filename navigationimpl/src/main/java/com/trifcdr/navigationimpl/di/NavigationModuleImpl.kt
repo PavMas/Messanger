@@ -5,6 +5,8 @@ import com.trifcdr.authorization.navigation.AuthorizationDirections
 import com.trifcdr.navigationapi.NavigationApi
 import com.trifcdr.navigationimpl.NavigationActivityProvider
 import com.trifcdr.navigationimpl.navigatiomnapis.AuthorizationNavigationImpl
+import com.trifcdr.navigationimpl.navigatiomnapis.RegistrationNavigationImpl
+import com.trifcdr.registration.navigation.RegistrationDirections
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -29,8 +31,8 @@ internal class NavigationModuleImpl {
         @Binds
         fun bindAuthorizationNavigationApi(api: AuthorizationNavigationImpl): NavigationApi<AuthorizationDirections>
 
-//        @Binds
-//        fun bindFeature2NavigationApi(api: Feature2NavigationImpl): NavigationApi<Feature2Directions>
+        @Binds
+        fun bindRegistrationNavigationApi(api: RegistrationNavigationImpl): NavigationApi<RegistrationDirections>
 //
 //        @Binds
 //        fun bindFeature3NavigationApi(api: Feature3NavigationImpl): NavigationApi<Feature3Directions>

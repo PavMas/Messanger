@@ -6,6 +6,8 @@ import com.trifcdr.navigationapi.NavigationApi
 import com.trifcdr.navigationimpl.NavigationActivityProvider
 import com.trifcdr.navigationimpl.di.NavigationComponentHolderImpl
 import com.trifcdr.navigationimpl.di.NavigationDependenciesImpl
+import com.trifcdr.registration.di.RegistrationDependencies
+import com.trifcdr.registration.navigation.RegistrationDirections
 import dagger.Module
 import dagger.Provides
 
@@ -27,12 +29,12 @@ internal class AppModule {
                 NavigationComponentHolderImpl.get().authorizationNavigationApi
         }
 
-//    @Provides
-//    fun provideFeature2Dependencies(): Feature2Dependencies =
-//        object : Feature2Dependencies {
-//            override val navigationApi: NavigationApi<Feature2Directions> =
-//                NavigationImplComponentHolder.get().feature2NavigationApi
-//        }
+    @Provides
+    fun provideRegistrationDependencies(): RegistrationDependencies =
+        object : RegistrationDependencies {
+            override val navigationApi: NavigationApi<RegistrationDirections> =
+                NavigationComponentHolderImpl.get().registrationNavigationApi
+        }
 //
 //    @Provides
 //    fun provideFeature3Dependencies(): Feature3Dependencies =

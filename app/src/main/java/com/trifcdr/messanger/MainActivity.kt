@@ -1,18 +1,23 @@
 package com.trifcdr.messanger
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.trifcdr.messanger.databinding.ActivityMainBinding
 import com.trifcdr.navigationimpl.NavigationActivity
 import com.trifcdr.navigationimpl.NavigationFragment
 
-internal class MainActivity :AppCompatActivity(), NavigationActivity {
+internal class MainActivity: AppCompatActivity(), NavigationActivity {
+
+
+    private lateinit var binding: ActivityMainBinding
+
+    private lateinit var bottomNavigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     override fun getNavigationFragment(): NavigationFragment? = supportFragmentManager.fragments

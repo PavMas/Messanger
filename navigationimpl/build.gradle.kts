@@ -1,11 +1,10 @@
 import com.android.build.gradle.internal.utils.immutableMapBuilder
 
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("org.jetbrains.kotlin.kapt")
-    id("androidx.navigation.safeargs.kotlin")
     id ("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -55,17 +54,17 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.androidx.navigation.fragment.ktx.v253)
-    implementation(libs.androidx.navigation.ui.ktx.v253)
-    implementation(libs.dagger)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
+    implementation(libs.dagger)
     kapt(libs.dagger.compiler)
-    annotationProcessor(libs.dagger.compiler)
 
 
     api(project(":navigationapi"))
     implementation(project(":di"))
     implementation(project(":Authorization"))
     implementation(project(":Registration"))
+    implementation(project(":Chats"))
 
 }

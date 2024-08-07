@@ -18,6 +18,11 @@ class AuthorizationNavigationImpl @Inject constructor(
                     AuthorizationFragmentDirections.fromAuthToRegister()
                 )
             }
+            AuthorizationDirections.ToChats -> {
+                navController.get().navigate(
+                    AuthorizationFragmentDirections.fromAuthToChats()
+                )
+            }
         }
     }
 }

@@ -8,11 +8,15 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.trifcdr.navigationimpl.databinding.FragmentNavigationBinding
 
 class NavigationFragment : Fragment() {
 
     private lateinit var binding: FragmentNavigationBinding
+
+    private lateinit var bottomNavigation: BottomNavigationView
 
     val navController: NavController by lazy {
         (childFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment).navController
@@ -24,6 +28,8 @@ class NavigationFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentNavigationBinding.inflate(inflater, container, false)
+        bottomNavigation = binding.bottomNavigationView
+        binding.bottomNavigationView.setupWithNavController(navController)
         setupBackButton()
         return binding.root
     }

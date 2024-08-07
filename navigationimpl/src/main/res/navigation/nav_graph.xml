@@ -2,15 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authorizationFragment">
     <fragment
-        android:id="@+id/feature1Fragment"
+        android:id="@+id/authorizationFragment"
         android:name="com.trifcdr.authorization.AuthorizationFragment"
         android:label="AuthorizationFragment"
         tools:layout="@layout/fragment_authorization">
         <action
             android:id="@+id/from_auth_to_register"
             app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/from_auth_to_chats"
+            app:destination="@id/chatsFragment" />
     </fragment>
 
     <fragment
@@ -18,6 +22,18 @@
         android:name="com.trifcdr.registration.RegistrationFragment"
         android:label="RegistrationFragment"
         tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/from_register_to_auth"
+            app:destination="@id/authorizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.trifcdr.chats.ChatsFragment"
+        android:label="ChatsFragment"
+        tools:layout="@layout/fragment_chats">
+        <action
+            android:id="@+id/from_chats_to_auth"
+            app:destination="@id/authorizationFragment" />
     </fragment>
 
 <!--    <fragment-->

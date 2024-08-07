@@ -34,9 +34,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    kapt {
-        generateStubs = true
+
+    buildFeatures{
+        viewBinding = true
     }
+
 
 }
 
@@ -51,16 +53,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.androidx.core.ktx.v190)
-    implementation(libs.androidx.appcompat.v160)
-    implementation(libs.material.v180)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
-    implementation("com.google.dagger:dagger:2.44")
-    kapt("com.google.dagger:dagger-compiler:2.44")
+
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
+    annotationProcessor(libs.dagger.compiler)
 
     implementation(project(":di"))
     implementation(project(":navigationimpl"))
     implementation(project(":Authorization"))
-//    implementation project(":feature2")
-//    implementation project(":feature3")
+    implementation(project(":Registration"))
+    implementation(project(":Chats"))
 }

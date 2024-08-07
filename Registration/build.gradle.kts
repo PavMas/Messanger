@@ -46,9 +46,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.dagger)
-
     kapt(libs.dagger.compiler)
-    annotationProcessor(libs.dagger.compiler)
 
     implementation(project(":di"))
     implementation(project(":navigationapi"))

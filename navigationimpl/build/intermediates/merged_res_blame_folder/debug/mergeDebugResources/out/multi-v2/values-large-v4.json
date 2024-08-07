@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-48:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.trifcdr.navigationimpl-mergeDebugResources-47:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\e1df596888ab389aa7c16a6f1a1fe545\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\3b18e7778a7e1919574a31b97c06a11f\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\b50d7a398a226591bd3758ef14d1473e\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\75993214d7be44b6af03005af218005e\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

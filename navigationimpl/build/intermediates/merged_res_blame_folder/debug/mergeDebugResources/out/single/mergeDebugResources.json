@@ -1,10 +1,10 @@
 [
     {
-        "merged": "com.trifcdr.navigationimpl-debug-50:/navigation_nav_graph.xml.flat",
-        "source": "com.trifcdr.navigationimpl-main-52:/navigation/nav_graph.xml"
+        "merged": "com.trifcdr.navigationimpl-debug-49:/layout_fragment_navigation.xml.flat",
+        "source": "com.trifcdr.navigationimpl-main-51:/layout/fragment_navigation.xml"
     },
     {
-        "merged": "com.trifcdr.navigationimpl-debug-50:/layout_fragment_navigation.xml.flat",
-        "source": "com.trifcdr.navigationimpl-main-52:/layout/fragment_navigation.xml"
+        "merged": "com.trifcdr.navigationimpl-debug-49:/navigation_nav_graph.xml.flat",
+        "source": "com.trifcdr.navigationimpl-main-51:/navigation/nav_graph.xml"
     }
 ]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/authorizationFragment"
+        android:title="Авторизация"/>
+    <item
+        android:id="@id/registrationFragment"
+        android:title="Регистрация"/>
+    <item
+        android:id="@id/chatsFragment"
+        android:title="Чаты"/>
+
+</menu>

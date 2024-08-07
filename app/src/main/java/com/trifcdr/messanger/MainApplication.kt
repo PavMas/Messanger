@@ -3,10 +3,11 @@ package com.trifcdr.messanger
 import android.app.Application
 import com.trifcdr.messanger.di.AppComponent
 import com.trifcdr.messanger.di.ComponentHolderInitializer
+import com.trifcdr.messanger.di.DaggerAppComponent
 import com.trifcdr.navigationimpl.NavigationActivityProvider
 import javax.inject.Inject
 
-class MainApplication: Application() {
+class  MainApplication: Application() {
 
     @Inject
     lateinit var componentHolderInitializer: ComponentHolderInitializer

@@ -6,28 +6,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.trifcdr.navigationimpl.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentNavigationBinding implements ViewBinding {
   @NonNull
-  private final FragmentContainerView rootView;
+  private final LinearLayoutCompat rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigationView;
 
   @NonNull
   public final FragmentContainerView navHost;
 
-  private FragmentNavigationBinding(@NonNull FragmentContainerView rootView,
-      @NonNull FragmentContainerView navHost) {
+  private FragmentNavigationBinding(@NonNull LinearLayoutCompat rootView,
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull FragmentContainerView navHost) {
     this.rootView = rootView;
+    this.bottomNavigationView = bottomNavigationView;
     this.navHost = navHost;
   }
 
   @Override
   @NonNull
-  public FragmentContainerView getRoot() {
+  public LinearLayoutCompat getRoot() {
     return rootView;
   }
 
@@ -48,12 +56,26 @@ public final class FragmentNavigationBinding implements ViewBinding {
 
   @NonNull
   public static FragmentNavigationBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.bottomNavigationView;
+      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigationView == null) {
+        break missingId;
+      }
+
+      id = R.id.nav_host;
+      FragmentContainerView navHost = ViewBindings.findChildViewById(rootView, id);
+      if (navHost == null) {
+        break missingId;
+      }
+
+      return new FragmentNavigationBinding((LinearLayoutCompat) rootView, bottomNavigationView,
+          navHost);
     }
-
-    FragmentContainerView navHost = (FragmentContainerView) rootView;
-
-    return new FragmentNavigationBinding((FragmentContainerView) rootView, navHost);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -9,7 +9,9 @@ daggerAndroidProcessor = "2.24"
 daggerAndroidProcessorVersion = "2.15"
 daggerAndroidSupport = "2.24"
 daggerCompiler = "2.5.1"
+daggerCompilerVersion = "2.44"
 daggerVersion = "2.5.1"
+googleDagger = "2.44"
 googleMaterial = "1.12.0"
 javaxInjectVersion = "1"
 jsr250ApiVersion = "1.0"
@@ -45,7 +47,9 @@ dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "d
 dagger-android-processor-v224 = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerAndroidProcessor" }
 dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "daggerAndroidSupport" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+dagger-compiler-v244 = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompilerVersion" }
 dagger-compiler-v251 = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompiler" }
+dagger-v244 = { module = "com.google.dagger:dagger", version.ref = "googleDagger" }
 dagger-v251 = { module = "com.google.dagger:dagger", version.ref = "daggerVersion" }
 google-dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerAndroidProcessorVersion" }
 inject-javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInjectVersion" }

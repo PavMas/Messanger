@@ -10,8 +10,13 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Authorization" />
+            <option value="$PROJECT_DIR$/Chats" />
             <option value="$PROJECT_DIR$/Registration" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common" />
+            <option value="$PROJECT_DIR$/core/data" />
+            <option value="$PROJECT_DIR$/core/network" />
             <option value="$PROJECT_DIR$/di" />
             <option value="$PROJECT_DIR$/navigationapi" />
             <option value="$PROJECT_DIR$/navigationimpl" />

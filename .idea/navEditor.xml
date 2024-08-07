@@ -8,18 +8,23 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="feature1Fragment">
+                  <entry key="authorizationFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="20" />
+                            <option name="x" value="-7" />
+                            <option name="y" value="11" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="from_feature1_to_feature2">
+                            <entry key="action_authorizationFragment_to_chatsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="from_auth_to_register">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -29,18 +34,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="feature2Fragment">
+                  <entry key="chatsFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="63" />
+                            <option name="x" value="6" />
+                            <option name="y" value="402" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="from_feature2_to_feature3">
+                            <entry key="from_register_to_chats">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -50,18 +55,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="feature3Fragment">
+                  <entry key="registrationFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="20" />
+                            <option name="x" value="273" />
+                            <option name="y" value="21" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="from_feature3_to_feature1">
+                            <entry key="from_register_to_auth">
                               <value>
                                 <LayoutPositions />
                               </value>

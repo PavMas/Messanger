@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.npm.importedPackageDir
+
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -51,19 +53,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    api(libs.dagger)
-    api(libs.dagger.android)
-    api(libs.dagger.android.support)
-
-    annotationProcessor(libs.dagger.compiler)
+    implementation(libs.dagger)
     kapt(libs.dagger.compiler)
-
-    annotationProcessor(libs.dagger.android.processor.v224)
-    kapt(libs.dagger.android.processor.v224)
-
-    compileOnly(libs.annotation.jsr250.api)
-    implementation(libs.inject.javax.inject)
-
 
     implementation(project(":di"))
     implementation(project(":navigationapi"))

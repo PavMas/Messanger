@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.trifcdr.authorization.databinding.FragmentAuthorizationBinding
-import com.trifcdr.authorization.di.AuthorizationComponent
 import com.trifcdr.authorization.di.AuthorizationComponentHolder
 import com.trifcdr.authorization.navigation.AuthorizationDirections
 import com.trifcdr.navigationapi.NavigationApi

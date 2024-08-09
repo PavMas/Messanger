@@ -34,6 +34,11 @@ android {
 
 dependencies {
 
+    implementation(project(":core:network"))
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat.v160)
     implementation(libs.material)

@@ -12,6 +12,9 @@
         <action
             android:id="@+id/from_auth_to_register"
             app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/from_auth_to_chats"
+            app:destination="@id/chatsFragment" />
     </fragment>
 
     <fragment
@@ -21,6 +24,15 @@
         tools:layout="@layout/fragment_registration">
         <action
             android:id="@+id/from_register_to_auth"
+            app:destination="@id/authorizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.trifcdr.chats.ChatsFragment"
+        android:label="ChatsFragment"
+        tools:layout="@layout/fragment_chats">
+        <action
+            android:id="@+id/from_chats_to_auth"
             app:destination="@id/authorizationFragment" />
     </fragment>
 

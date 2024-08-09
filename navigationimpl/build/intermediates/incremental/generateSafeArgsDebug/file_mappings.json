@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.trifcdr.authorization.AuthorizationFragmentDirections","com.trifcdr.registration.RegistrationFragmentDirections"]}]
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.trifcdr.authorization.AuthorizationFragmentDirections","com.trifcdr.registration.RegistrationFragmentDirections","com.trifcdr.chats.ChatsFragmentDirections"]}]

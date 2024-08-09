@@ -4,7 +4,7 @@
             "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-48:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\3b18e7778a7e1919574a31b97c06a11f\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\f7a6885a821807796fd052d296496bbb\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

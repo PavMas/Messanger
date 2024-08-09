@@ -2,7 +2,10 @@ R_DEF: Internal format may change without notice
 local
 id authorizationFragment
 id bottomNavigationView
+id chatsFragment
+id from_auth_to_chats
 id from_auth_to_register
+id from_chats_to_auth
 id from_register_to_auth
 id nav_graph
 id nav_host

@@ -7,7 +7,7 @@ import com.trifcdr.messanger.di.DaggerAppComponent
 import com.trifcdr.navigationimpl.NavigationActivityProvider
 import javax.inject.Inject
 
-class  MainApplication: Application() {
+class MainApplication: Application() {
 
     @Inject
     lateinit var componentHolderInitializer: ComponentHolderInitializer
@@ -20,5 +20,6 @@ class  MainApplication: Application() {
         super.onCreate()
         appComponent.inject(this)
         componentHolderInitializer.init()
+        //val networkComponent = DaggerNetworkModuleComponent
     }
 }

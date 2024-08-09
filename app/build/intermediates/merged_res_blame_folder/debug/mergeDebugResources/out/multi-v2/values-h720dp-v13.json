@@ -4,7 +4,7 @@
             "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-48:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\75993214d7be44b6af03005af218005e\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\79c8bd365799940aaa409d615f572302\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

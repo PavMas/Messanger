@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="phone_hint">Номер телефона</string>
+    <string name="get_code">Получить код</string>
+    <string name="check_code">Проверить</string>
+</resources>

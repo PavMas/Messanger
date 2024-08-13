@@ -8,5 +8,7 @@ sealed interface AuthorizationDirections {
 
     data object ToChats : AuthorizationDirections
 
+    data object ToCodeCheck : AuthorizationDirections
+
 
 }

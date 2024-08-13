@@ -65,6 +65,7 @@ dependencies {
 
     implementation(libs.retrofit)
 
+    implementation("com.hbb20:ccp:2.6.0")
 
 
 

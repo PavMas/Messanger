@@ -13,13 +13,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-7" />
-                            <option name="y" value="11" />
+                            <option name="x" value="-132" />
+                            <option name="y" value="-8" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_authorizationFragment_to_chatsFragment">
+                            <entry key="from_auth_to_chats">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="from_auth_to_code">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -45,12 +50,24 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="from_register_to_chats">
+                            <entry key="from_chats_to_auth">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="checkCodeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-219" />
+                            <option name="y" value="355" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

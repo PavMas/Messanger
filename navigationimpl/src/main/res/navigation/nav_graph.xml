@@ -15,6 +15,16 @@
         <action
             android:id="@+id/from_auth_to_chats"
             app:destination="@id/chatsFragment" />
+        <action
+            android:id="@+id/from_auth_to_code"
+            app:destination="@id/checkCodeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/checkCodeFragment"
+        android:name="com.trifcdr.authorization.AuthCodeFragment"
+        android:label="AuthCodeFragment"
+        tools:layout="@layout/fragment_code">
     </fragment>
 
     <fragment

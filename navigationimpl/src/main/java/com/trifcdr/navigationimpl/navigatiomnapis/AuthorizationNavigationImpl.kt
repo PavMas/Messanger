@@ -23,6 +23,11 @@ class AuthorizationNavigationImpl @Inject constructor(
                     AuthorizationFragmentDirections.fromAuthToChats()
                 )
             }
+            AuthorizationDirections.ToCodeCheck -> {
+                navController.get().navigate(
+                    AuthorizationFragmentDirections.fromAuthToCode()
+                )
+            }
         }
     }
 }

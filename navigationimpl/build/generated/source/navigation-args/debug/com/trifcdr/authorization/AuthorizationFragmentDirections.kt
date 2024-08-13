@@ -10,5 +10,7 @@ public class AuthorizationFragmentDirections private constructor() {
         ActionOnlyNavDirections(R.id.from_auth_to_register)
 
     public fun fromAuthToChats(): NavDirections = ActionOnlyNavDirections(R.id.from_auth_to_chats)
+
+    public fun fromAuthToCode(): NavDirections = ActionOnlyNavDirections(R.id.from_auth_to_code)
   }
 }

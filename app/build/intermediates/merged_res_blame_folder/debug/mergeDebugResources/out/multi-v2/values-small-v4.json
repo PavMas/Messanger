@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-48:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-50:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-3\\f7a6885a821807796fd052d296496bbb\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\3ee3cf9ac8125c344d5d061232a71724\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

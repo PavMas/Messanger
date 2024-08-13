@@ -13,6 +13,7 @@ class MainApplication: Application() {
     lateinit var componentHolderInitializer: ComponentHolderInitializer
 
     private val appComponent: AppComponent get() = DaggerAppComponent.factory().create(
+        context = this,
         activityProvider = NavigationActivityProvider(this),
     )
 

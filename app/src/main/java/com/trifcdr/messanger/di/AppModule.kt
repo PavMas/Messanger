@@ -12,7 +12,7 @@ import dagger.Module
 import dagger.Provides
 
 
-@Module
+@Module()
 internal class AppModule {
 
     @Provides

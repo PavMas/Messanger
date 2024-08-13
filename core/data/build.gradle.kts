@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
 }
 
 android {
@@ -35,6 +36,8 @@ android {
 dependencies {
 
     implementation(project(":core:network"))
+    //implementation(project(":core:common"))
+    implementation(project(":domain"))
 
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
@@ -45,4 +48,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 }

@@ -7,6 +7,6 @@ import dagger.Component
 
 @Component(modules = [NetworkModule::class])
 interface NetworkModuleComponent {
-    fun provideNetwork(): Network
 
+    fun provideNetwork(): Network
 }

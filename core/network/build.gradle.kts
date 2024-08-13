@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
+    kotlin("plugin.serialization")
+
 }
 
 android {
@@ -49,4 +51,6 @@ dependencies {
     kapt(libs.kotlinx.metadata.jvm)
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+    implementation(libs.kotlinx.serialization.json)
+
 }

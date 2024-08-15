@@ -36,7 +36,7 @@ android {
 dependencies {
 
     implementation(project(":core:network"))
-    //implementation(project(":core:common"))
+    implementation(project(":core:storage"))
     implementation(project(":domain"))
 
     implementation(libs.retrofit)

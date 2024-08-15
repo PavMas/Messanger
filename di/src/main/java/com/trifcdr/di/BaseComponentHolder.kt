@@ -1,7 +1,9 @@
 package com.trifcdr.di;
 
 import java.lang.Exception
+import java.util.Objects
 import javax.inject.Provider
+import javax.naming.Context
 
 abstract class BaseComponentHolder<
         COMPONENT : BaseApi,
@@ -24,6 +26,7 @@ abstract class BaseComponentHolder<
 
                 dependencyProvider = provider
             }
+
 
             fun clear() {
                 component = null

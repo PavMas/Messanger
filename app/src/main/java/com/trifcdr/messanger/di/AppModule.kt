@@ -1,5 +1,6 @@
 package com.trifcdr.messanger.di
 
+import android.content.Context
 import com.trifcdr.authorization.di.AuthorizationDependencies
 import com.trifcdr.authorization.navigation.AuthorizationDirections
 import com.trifcdr.navigationapi.NavigationApi
@@ -12,8 +13,10 @@ import dagger.Module
 import dagger.Provides
 
 
-@Module()
+@Module
 internal class AppModule {
+
+
 
     @Provides
     fun provideNavigationDependencies(
@@ -23,10 +26,11 @@ internal class AppModule {
     }
 
     @Provides
-    fun provideAuthorizationDependencies(): AuthorizationDependencies =
+    fun provideAuthorizationDependencies(context: Context): AuthorizationDependencies =
         object : AuthorizationDependencies {
             override val navigationApi: NavigationApi<AuthorizationDirections> =
                 NavigationComponentHolderImpl.get().authorizationNavigationApi
+            override val context: Context = context
         }
 
     @Provides
@@ -35,6 +39,7 @@ internal class AppModule {
             override val navigationApi: NavigationApi<RegistrationDirections> =
                 NavigationComponentHolderImpl.get().registrationNavigationApi
         }
+
 //
 //    @Provides
 //    fun provideFeature3Dependencies(): Feature3Dependencies =

@@ -1,7 +1,7 @@
 package com.trifcdr.authorization.di
 
 import androidx.lifecycle.ViewModel
-import com.trifcdr.authorization.AuthorizationViewModel
+import com.trifcdr.authorization.viewmodel.AuthorizationViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.ClassKey

@@ -1,13 +1,14 @@
 package com.trifcdr.authorization.di
 
-import com.trifcdr.common.di.DaggerNetworkModuleComponent
+import android.content.Context
 import com.trifcdr.data.repository.AuthorizationRepositoryImpl
 import com.trifcdr.domain.repository.AuthorizationRepository
-import com.trifcdr.network.model.Network
+import com.trifcdr.network.retrofit.PlannerokApi
+import com.trifcdr.storage.AppStorage
+import com.trifcdr.storage.AppStorageImpl
 import dagger.Module
 import dagger.Provides
-import retrofit2.Retrofit
-import javax.inject.Inject
+
 
 /**
  * Created by trifcdr.
@@ -16,10 +17,22 @@ import javax.inject.Inject
 @Module
 class AuthorizationModule {
 
+
     @Provides
-    fun provideAuthorizationRepository(): AuthorizationRepository {
+    fun provideAuthorizationRepository(plannerokApi: PlannerokApi,
+                                       appStorage: AppStorage): AuthorizationRepository{
         return AuthorizationRepositoryImpl(
-            DaggerNetworkModuleComponent.create().provideNetwork().getRetrofit()
+            plannerokApi,
+            appStorage
         )
     }
+
+    @Provides
+    fun provideAuthorizationApi() = PlannerokApi.getInstance()
+
+    @Provides
+    fun provideAppStorage(context: Context): AppStorage = AppStorageImpl(context)
+
+
+
 }

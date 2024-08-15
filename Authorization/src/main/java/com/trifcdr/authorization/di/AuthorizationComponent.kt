@@ -1,11 +1,9 @@
 package com.trifcdr.authorization.di
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
-import com.trifcdr.data.repository.AuthorizationRepositoryImpl
-import com.trifcdr.domain.repository.AuthorizationRepository
+import dagger.BindsInstance
 import dagger.Component
-import dagger.Provides
-import retrofit2.Retrofit
 
 
 @Component(
@@ -19,7 +17,7 @@ interface AuthorizationComponent: AuthorizationApi {
     @Component.Factory
     interface Factory {
         fun create(
-            dependencies: AuthorizationDependencies
+            dependencies: AuthorizationDependencies,
         ): AuthorizationComponent
     }
 }

@@ -1,36 +1,42 @@
 package com.trifcdr.data.repository
 
 import com.trifcdr.data.mapper.mapAuthCodeToDomain
+import com.trifcdr.data.mapper.mapAuthDataToDomain
 import com.trifcdr.domain.models.AuthCode
+import com.trifcdr.domain.models.AuthData
 import com.trifcdr.domain.models.DomainResource
 import com.trifcdr.domain.repository.AuthorizationRepository
+import com.trifcdr.network.model.CheckCodeRequestModel
 import com.trifcdr.network.model.SendCodeRequestModel
-import com.trifcdr.network.retrofit.AuthorizationApi
-import retrofit2.Retrofit
-import javax.inject.Inject
+import com.trifcdr.network.retrofit.PlannerokApi
+import com.trifcdr.storage.AppStorage
+import retrofit2.HttpException
 
-//
-//interface AuthorizationRepository {
-//    suspend fun sendAuthCode(phone: String): Resource<AuthCode>
-//    suspend fun checkAuthCode(phone: String, code: String): Resource<AuthData>
-//}
-
-class AuthorizationRepositoryImpl (private val retrofit: Retrofit) : AuthorizationRepository {
+class AuthorizationRepositoryImpl(
+    private val api: PlannerokApi,
+    private val storage: AppStorage,
+) : AuthorizationRepository {
     override suspend fun sendAuthCode(phone: String): DomainResource<AuthCode> {
-        val authApi = retrofit.create(AuthorizationApi::class.java)
         val sendCodeModel = SendCodeRequestModel(phone)
-        return DomainResource.Success(mapAuthCodeToDomain(authApi.sendAuthCode(sendCodeModel)))
+        return DomainResource.Success(mapAuthCodeToDomain(api.sendAuthCode(sendCodeModel)))
     }
 
-//    override suspend fun checkAuthCode(phone: String, code: String): Resource<AuthData> {
-//        val authApi = network.getRetrofit().create(AuthorizationApi::class.java)
-//        val body = CheckCodeRequestModel(phone, code)
-//        val response = authApi.checkAuthCode(body)
-//        var responseFromServer: Resource<AuthData> = Resource.Empty
-//        CoroutineScope(Dispatchers.IO).launch {
-//            //val checkCodeResponse = response.execute()
-//            //responseFromServer = Resource.Success(checkCodeResponse.body()!!)
-//        }.join()
-//        return responseFromServer
-//    }
+
+    override suspend fun checkAuthCode(phone: String, code: String): DomainResource<AuthData> {
+        val checkCodeModel = CheckCodeRequestModel(phone, code)
+        return try {
+            val res = api.checkAuthCode(checkCodeModel)
+            storage.saveTokens(
+                accessToken = res.accessToken,
+                refreshToken = res.refreshToken
+            )
+            DomainResource.Success(mapAuthDataToDomain(res))
+        } catch (error: HttpException) {
+            if (error.code() == 404) {
+                DomainResource.Failure(Exception("Not Found"))
+            } else {
+                DomainResource.Failure(Exception("Unknown Exception"))
+            }
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package com.trifcdr.authorization
+package com.trifcdr.authorization.fragment
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -10,18 +10,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hbb20.CountryCodePicker
 import com.trifcdr.authorization.databinding.FragmentAuthorizationBinding
 import com.trifcdr.authorization.di.AuthorizationComponentHolder
 import com.trifcdr.authorization.navigation.AuthorizationDirections
+import com.trifcdr.authorization.navigation.SendCodeToCheckArgs
+import com.trifcdr.authorization.viewmodel.AuthViewModelFactory
+import com.trifcdr.authorization.viewmodel.AuthorizationViewModel
 import com.trifcdr.domain.models.DomainResource
 import com.trifcdr.navigationapi.NavigationApi
 import javax.inject.Inject
 
-class AuthorizationFragment : Fragment() {
+class SendCodeFragment : Fragment() {
 
     private lateinit var binding: FragmentAuthorizationBinding
 
@@ -67,14 +69,17 @@ class AuthorizationFragment : Fragment() {
     private fun setCodeObserver() {
         viewModel.resultSendCode.observe(viewLifecycleOwner) { sendCodeResult ->
             if (sendCodeResult is DomainResource.Success) {
-                navigationApi.navigate(AuthorizationDirections.ToCodeCheck)
+                navigationApi.navigate(AuthorizationDirections.ToCodeCheck(getCheckCodeArgs()))
             }
         }
     }
 
+    private fun getCheckCodeArgs(): SendCodeToCheckArgs = SendCodeToCheckArgs(
+        phone = getNumber()
+    )
+
     private fun setClickListeners() {
         getCode.setOnClickListener {
-            Toast.makeText(context, "!!!", Toast.LENGTH_SHORT).show()
             viewModel.sendAuthCode(getNumber())
         }
     }

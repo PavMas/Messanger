@@ -1,14 +1,16 @@
 package com.trifcdr.authorization.di
 
-import androidx.lifecycle.ViewModel
-import com.trifcdr.authorization.AuthorizationFragment
+import android.content.Context
+import com.trifcdr.authorization.fragment.AuthCodeFragment
+import com.trifcdr.authorization.fragment.SendCodeFragment
 import com.trifcdr.di.BaseApi
+import dagger.BindsInstance
+
 
 interface AuthorizationApi: BaseApi {
 
-    fun inject(fragment: AuthorizationFragment)
+    fun inject(fragment: SendCodeFragment)
 
-
-
+    fun inject(fragment: AuthCodeFragment)
 
 }

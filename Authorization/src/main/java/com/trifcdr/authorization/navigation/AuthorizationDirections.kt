@@ -8,7 +8,7 @@ sealed interface AuthorizationDirections {
 
     data object ToChats : AuthorizationDirections
 
-    data object ToCodeCheck : AuthorizationDirections
+    data class ToCodeCheck(val args: SendCodeToCheckArgs) : AuthorizationDirections
 
 
 }

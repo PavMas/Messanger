@@ -6,7 +6,7 @@
     app:startDestination="@id/authorizationFragment">
     <fragment
         android:id="@+id/authorizationFragment"
-        android:name="com.trifcdr.authorization.AuthorizationFragment"
+        android:name="com.trifcdr.authorization.fragment.SendCodeFragment"
         android:label="AuthorizationFragment"
         tools:layout="@layout/fragment_authorization">
         <action
@@ -22,9 +22,12 @@
     </fragment>
     <fragment
         android:id="@+id/checkCodeFragment"
-        android:name="com.trifcdr.authorization.AuthCodeFragment"
+        android:name="com.trifcdr.authorization.fragment.AuthCodeFragment"
         android:label="AuthCodeFragment"
         tools:layout="@layout/fragment_code">
+        <argument
+            android:name="phone"
+            app:argType="com.trifcdr.authorization.navigation.CheckCodeArgs" />
     </fragment>
 
     <fragment

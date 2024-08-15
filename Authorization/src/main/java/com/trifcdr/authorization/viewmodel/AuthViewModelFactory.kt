@@ -1,4 +1,4 @@
-package com.trifcdr.authorization
+package com.trifcdr.authorization.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

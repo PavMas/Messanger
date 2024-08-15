@@ -1,8 +1,10 @@
 package com.trifcdr.navigationimpl.navigatiomnapis
 
 import androidx.navigation.NavController
-import com.trifcdr.authorization.AuthorizationFragmentDirections
+import com.trifcdr.authorization.fragment.SendCodeFragmentDirections
 import com.trifcdr.authorization.navigation.AuthorizationDirections
+import com.trifcdr.authorization.navigation.CheckCodeArgs
+import com.trifcdr.authorization.navigation.SendCodeToCheckArgs
 import com.trifcdr.navigationapi.NavigationApi
 import javax.inject.Inject
 import javax.inject.Provider
@@ -15,19 +17,27 @@ class AuthorizationNavigationImpl @Inject constructor(
         when (direction) {
             AuthorizationDirections.ToRegistration -> {
                 navController.get().navigate(
-                    AuthorizationFragmentDirections.fromAuthToRegister()
+                    SendCodeFragmentDirections.fromAuthToRegister()
                 )
             }
             AuthorizationDirections.ToChats -> {
                 navController.get().navigate(
-                    AuthorizationFragmentDirections.fromAuthToChats()
+                    SendCodeFragmentDirections.fromAuthToChats()
                 )
             }
-            AuthorizationDirections.ToCodeCheck -> {
+            is AuthorizationDirections.ToCodeCheck -> {
                 navController.get().navigate(
-                    AuthorizationFragmentDirections.fromAuthToCode()
+                    SendCodeFragmentDirections.fromAuthToCode(
+                        phone = direction.args.toCheckCodeArgs()
+                    )
                 )
             }
         }
+    }
+
+    companion object {
+        private fun SendCodeToCheckArgs.toCheckCodeArgs(): CheckCodeArgs = CheckCodeArgs(
+            phone = phone
+        )
     }
 }

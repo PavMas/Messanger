@@ -9,9 +9,7 @@
         android:name="com.trifcdr.authorization.fragment.SendCodeFragment"
         android:label="AuthorizationFragment"
         tools:layout="@layout/fragment_authorization">
-        <action
-            android:id="@+id/from_auth_to_register"
-            app:destination="@id/registrationFragment" />
+
         <action
             android:id="@+id/from_auth_to_chats"
             app:destination="@id/chatsFragment" />
@@ -25,6 +23,9 @@
         android:name="com.trifcdr.authorization.fragment.AuthCodeFragment"
         android:label="AuthCodeFragment"
         tools:layout="@layout/fragment_code">
+        <action
+            android:id="@+id/from_auth_to_register"
+            app:destination="@id/registrationFragment" />
         <argument
             android:name="phone"
             app:argType="com.trifcdr.authorization.navigation.CheckCodeArgs" />
@@ -38,6 +39,9 @@
         <action
             android:id="@+id/from_register_to_auth"
             app:destination="@id/authorizationFragment" />
+        <argument
+            android:name="phone"
+            app:argType="com.trifcdr.registration.navigation.RegistrationArgs" />
     </fragment>
     <fragment
         android:id="@+id/chatsFragment"

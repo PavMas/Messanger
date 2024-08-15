@@ -16,6 +16,7 @@ class AuthorizationRepositoryImpl(
     private val api: PlannerokApi,
     private val storage: AppStorage,
 ) : AuthorizationRepository {
+
     override suspend fun sendAuthCode(phone: String): DomainResource<AuthCode> {
         val sendCodeModel = SendCodeRequestModel(phone)
         return DomainResource.Success(mapAuthCodeToDomain(api.sendAuthCode(sendCodeModel)))

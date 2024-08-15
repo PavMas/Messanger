@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Имя</string>
+    <string name="username">Имя пользователя</string>
+    <string name="registration">Регистрация</string>
+    <string name="do_register">Зарегистрироваться</string>
+    <string name="phone">Телефон</string>
+</resources>

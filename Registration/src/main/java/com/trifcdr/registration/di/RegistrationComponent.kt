@@ -8,6 +8,7 @@ import dagger.Component
 
 @Component(
     dependencies = [RegistrationDependencies::class],
+    modules = [RegistrationModule::class, ViewModelModule::class]
 )
 
 interface RegistrationComponent: RegistrationApi {

@@ -3,7 +3,8 @@ package com.trifcdr.network.retrofit
 import com.trifcdr.network.model.AuthCodeModel
 import com.trifcdr.network.model.AuthDataModel
 import com.trifcdr.network.model.CheckCodeRequestModel
-import com.trifcdr.network.model.RegisterData
+import com.trifcdr.network.model.RegisterUserDataModel
+import com.trifcdr.network.model.RegisterUserRequestModule
 import com.trifcdr.network.model.SendCodeRequestModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -21,7 +22,7 @@ interface PlannerokApi {
     suspend fun checkAuthCode(@Body body: CheckCodeRequestModel): AuthDataModel
 
     @POST("/api/v1/users/register")
-    suspend fun registerUser(@Body body: String): RegisterData
+    suspend fun registerUser(@Body body: RegisterUserRequestModule): RegisterUserDataModel
 
     companion object {
         private var plannerokApiService: PlannerokApi? = null

@@ -1,11 +1,14 @@
 package com.trifcdr.navigationimpl.navigatiomnapis;
 
 import androidx.navigation.NavController;
+import com.trifcdr.authorization.fragment.AuthCodeFragmentDirections;
 import com.trifcdr.authorization.fragment.SendCodeFragmentDirections;
 import com.trifcdr.authorization.navigation.AuthorizationDirections;
 import com.trifcdr.authorization.navigation.CheckCodeArgs;
+import com.trifcdr.authorization.navigation.CheckCodeToRegistrationArgs;
 import com.trifcdr.authorization.navigation.SendCodeToCheckArgs;
 import com.trifcdr.navigationapi.NavigationApi;
+import com.trifcdr.registration.navigation.RegistrationArgs;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
@@ -27,7 +30,7 @@ public final class AuthorizationNavigationImpl implements com.trifcdr.navigation
     com.trifcdr.authorization.navigation.AuthorizationDirections direction) {
     }
     
-    @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\f\u0010\u0003\u001a\u00020\u0004*\u00020\u0005H\u0002\u00a8\u0006\u0006"}, d2 = {"Lcom/trifcdr/navigationimpl/navigatiomnapis/AuthorizationNavigationImpl$Companion;", "", "()V", "toCheckCodeArgs", "Lcom/trifcdr/authorization/navigation/CheckCodeArgs;", "Lcom/trifcdr/authorization/navigation/SendCodeToCheckArgs;", "navigationimpl_debug"})
+    @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\f\u0010\u0003\u001a\u00020\u0004*\u00020\u0005H\u0002J\f\u0010\u0006\u001a\u00020\u0007*\u00020\bH\u0002\u00a8\u0006\t"}, d2 = {"Lcom/trifcdr/navigationimpl/navigatiomnapis/AuthorizationNavigationImpl$Companion;", "", "()V", "toCheckCodeArgs", "Lcom/trifcdr/authorization/navigation/CheckCodeArgs;", "Lcom/trifcdr/authorization/navigation/SendCodeToCheckArgs;", "toRegistrationArgs", "Lcom/trifcdr/registration/navigation/RegistrationArgs;", "Lcom/trifcdr/authorization/navigation/CheckCodeToRegistrationArgs;", "navigationimpl_debug"})
     public static final class Companion {
         
         private Companion() {
@@ -35,6 +38,10 @@ public final class AuthorizationNavigationImpl implements com.trifcdr.navigation
         }
         
         private final com.trifcdr.authorization.navigation.CheckCodeArgs toCheckCodeArgs(com.trifcdr.authorization.navigation.SendCodeToCheckArgs $this$toCheckCodeArgs) {
+            return null;
+        }
+        
+        private final com.trifcdr.registration.navigation.RegistrationArgs toRegistrationArgs(com.trifcdr.authorization.navigation.CheckCodeToRegistrationArgs $this$toRegistrationArgs) {
             return null;
         }
     }

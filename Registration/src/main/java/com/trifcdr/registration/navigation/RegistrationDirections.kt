@@ -5,5 +5,5 @@ package com.trifcdr.registration.navigation
  */
 sealed interface RegistrationDirections {
 
-    object ToAuthorization: RegistrationDirections
+    data object ToAuthorization: RegistrationDirections
 }

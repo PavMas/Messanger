@@ -34,10 +34,11 @@ internal class AppModule {
         }
 
     @Provides
-    fun provideRegistrationDependencies(): RegistrationDependencies =
+    fun provideRegistrationDependencies(context: Context): RegistrationDependencies =
         object : RegistrationDependencies {
             override val navigationApi: NavigationApi<RegistrationDirections> =
                 NavigationComponentHolderImpl.get().registrationNavigationApi
+            override val context: Context = context
         }
 
 //

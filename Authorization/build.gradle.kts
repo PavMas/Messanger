@@ -65,8 +65,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.fragment:fragment-ktx:1.8.2")
 
-    implementation(libs.retrofit)
-
     implementation("com.hbb20:ccp:2.6.0")
 
 

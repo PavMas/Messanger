@@ -33,6 +33,4 @@ class AuthorizationModule {
     @Provides
     fun provideAppStorage(context: Context): AppStorage = AppStorageImpl(context)
 
-
-
 }

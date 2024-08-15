@@ -54,9 +54,42 @@
             android:hint="@string/username">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username"
+                android:inputType=""
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/up_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upper_case"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/low_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lower_case"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/digits"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/symbols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symbols"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <Button
             android:id="@+id/register"

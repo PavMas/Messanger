@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.trifcdr.registration.RegistrationFragment"
+        android:name="com.trifcdr.registration.fragment.RegistrationFragment"
         android:label="RegistrationFragment"
         tools:layout="@layout/fragment_registration">
         <action

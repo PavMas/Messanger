@@ -5,4 +5,8 @@
     <string name="registration">Регистрация</string>
     <string name="do_register">Зарегистрироваться</string>
     <string name="phone">Телефон</string>
+    <string name="upper_case">Заглавные латинские буквы: от A до Z</string>
+    <string name="lower_case">Строчные латинские буквы: от a до z</string>
+    <string name="digits">Цифры от 0 до 9</string>
+    <string name="symbols">Символы: - _</string>
 </resources>

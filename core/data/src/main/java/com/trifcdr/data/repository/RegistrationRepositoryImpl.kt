@@ -28,13 +28,9 @@ class RegistrationRepositoryImpl(
                 refreshToken = res.refreshToken
             )
             DomainResource.Success(mapRegisterDataToDomain(res))
-        } catch (error: HttpException) {
-            if (error.code() == 404) {
-                DomainResource.Failure(Exception("Not Found"))
-            } else {
-                DomainResource.Failure(Exception("Unknown Exception"))
+        } catch (error: Exception) {
+                DomainResource.Failure(Exception())
             }
         }
-    }
 
 }

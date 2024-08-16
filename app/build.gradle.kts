@@ -66,6 +66,7 @@ dependencies {
     implementation(project(":navigationimpl"))
     implementation(project(":Authorization"))
     implementation(project(":Registration"))
+    implementation(project(":Profile"))
     implementation(project(":Chats"))
     implementation(project(":core:common"))
 }

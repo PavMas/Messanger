@@ -79,7 +79,7 @@ class RegistrationFragment : Fragment() {
     private fun setRegisterObserver() {
         viewModel.resultRegisterUser.observe(viewLifecycleOwner){ registerResult ->
             if (registerResult is DomainResource.Success) {
-
+                navigationApi.navigate(RegistrationDirections.ToProfile)
             }
             if (registerResult is DomainResource.Failure){
                 Toast.makeText(context, "Ошибка регистрации. Повторите попытку", Toast.LENGTH_LONG).show()

@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+id action_authorizationFragment_to_profileFragment
 id authorizationFragment
 id bottomNavigationView
 id chatsFragment
@@ -9,8 +10,10 @@ id from_auth_to_code
 id from_auth_to_register
 id from_chats_to_auth
 id from_register_to_auth
+id from_register_to_profile
 id nav_graph
 id nav_host
+id profileFragment
 id registrationFragment
 layout fragment_navigation
 menu bottom_nav_menu

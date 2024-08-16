@@ -5,7 +5,9 @@ import com.trifcdr.authorization.navigation.AuthorizationDirections;
 import com.trifcdr.navigationapi.NavigationApi;
 import com.trifcdr.navigationimpl.NavigationActivityProvider;
 import com.trifcdr.navigationimpl.navigatiomnapis.AuthorizationNavigationImpl;
+import com.trifcdr.navigationimpl.navigatiomnapis.ProfileNavigationImpl;
 import com.trifcdr.navigationimpl.navigatiomnapis.RegistrationNavigationImpl;
+import com.trifcdr.profile.navigation.ProfileDirections;
 import com.trifcdr.registration.navigation.RegistrationDirections;
 import dagger.Binds;
 import dagger.Module;
@@ -27,7 +29,7 @@ public final class NavigationModuleImpl {
     }
     
     @dagger.Module
-    @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bg\u0018\u00002\u00020\u0001J\u0016\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u00032\u0006\u0010\u0005\u001a\u00020\u0006H\'J\u0016\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\b0\u00032\u0006\u0010\u0005\u001a\u00020\tH\'\u00a8\u0006\n"}, d2 = {"Lcom/trifcdr/navigationimpl/di/NavigationModuleImpl$Binder;", "", "bindAuthorizationNavigationApi", "Lcom/trifcdr/navigationapi/NavigationApi;", "Lcom/trifcdr/authorization/navigation/AuthorizationDirections;", "api", "Lcom/trifcdr/navigationimpl/navigatiomnapis/AuthorizationNavigationImpl;", "bindRegistrationNavigationApi", "Lcom/trifcdr/registration/navigation/RegistrationDirections;", "Lcom/trifcdr/navigationimpl/navigatiomnapis/RegistrationNavigationImpl;", "navigationimpl_debug"})
+    @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bg\u0018\u00002\u00020\u0001J\u0016\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u00032\u0006\u0010\u0005\u001a\u00020\u0006H\'J\u0016\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\b0\u00032\u0006\u0010\u0005\u001a\u00020\tH\'J\u0016\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u000b0\u00032\u0006\u0010\u0005\u001a\u00020\fH\'\u00a8\u0006\r"}, d2 = {"Lcom/trifcdr/navigationimpl/di/NavigationModuleImpl$Binder;", "", "bindAuthorizationNavigationApi", "Lcom/trifcdr/navigationapi/NavigationApi;", "Lcom/trifcdr/authorization/navigation/AuthorizationDirections;", "api", "Lcom/trifcdr/navigationimpl/navigatiomnapis/AuthorizationNavigationImpl;", "bindProfileNavigationApi", "Lcom/trifcdr/profile/navigation/ProfileDirections;", "Lcom/trifcdr/navigationimpl/navigatiomnapis/ProfileNavigationImpl;", "bindRegistrationNavigationApi", "Lcom/trifcdr/registration/navigation/RegistrationDirections;", "Lcom/trifcdr/navigationimpl/navigatiomnapis/RegistrationNavigationImpl;", "navigationimpl_debug"})
     public static abstract interface Binder {
         
         @dagger.Binds
@@ -39,5 +41,10 @@ public final class NavigationModuleImpl {
         @org.jetbrains.annotations.NotNull
         public abstract com.trifcdr.navigationapi.NavigationApi<com.trifcdr.registration.navigation.RegistrationDirections> bindRegistrationNavigationApi(@org.jetbrains.annotations.NotNull
         com.trifcdr.navigationimpl.navigatiomnapis.RegistrationNavigationImpl api);
+        
+        @dagger.Binds
+        @org.jetbrains.annotations.NotNull
+        public abstract com.trifcdr.navigationapi.NavigationApi<com.trifcdr.profile.navigation.ProfileDirections> bindProfileNavigationApi(@org.jetbrains.annotations.NotNull
+        com.trifcdr.navigationimpl.navigatiomnapis.ProfileNavigationImpl api);
     }
 }

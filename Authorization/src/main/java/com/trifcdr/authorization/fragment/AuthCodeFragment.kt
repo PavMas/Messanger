@@ -41,6 +41,7 @@ class AuthCodeFragment : Fragment() {
     private lateinit var digit4: EditText
     private lateinit var digit5: EditText
     private lateinit var digit6: EditText
+
     private lateinit var checkBtn: Button
 
     private val args by getArgs<CheckCodeArgs>()

@@ -6,11 +6,14 @@ import com.trifcdr.network.model.CheckCodeRequestModel
 import com.trifcdr.network.model.RegisterUserDataModel
 import com.trifcdr.network.model.RegisterUserRequestModule
 import com.trifcdr.network.model.SendCodeRequestModel
+import com.trifcdr.network.model.UserDataModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface PlannerokApi {
@@ -21,8 +24,11 @@ interface PlannerokApi {
     @POST("/api/v1/users/check-auth-code/")
     suspend fun checkAuthCode(@Body body: CheckCodeRequestModel): AuthDataModel
 
-    @POST("/api/v1/users/register")
+    @POST("/api/v1/users/register/")
     suspend fun registerUser(@Body body: RegisterUserRequestModule): RegisterUserDataModel
+
+    @GET("/api/v1/users/me/")
+    suspend fun getUserData(@Header("Authorization") token: String): UserDataModel
 
     companion object {
         private var plannerokApiService: PlannerokApi? = null

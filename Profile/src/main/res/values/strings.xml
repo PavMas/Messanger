@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="id">ID</string>
+    <string name="vk">ВКонтакте</string>
+    <string name="inst">Instagram</string>
+    <string name="logout">Выйти из аккаунта</string>
+</resources>

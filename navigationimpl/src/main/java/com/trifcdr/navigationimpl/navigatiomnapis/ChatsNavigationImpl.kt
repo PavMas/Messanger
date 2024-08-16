@@ -4,8 +4,6 @@ import androidx.navigation.NavController
 import com.trifcdr.chats.ChatsFragmentDirections
 import com.trifcdr.chats.navigation.ChatsDirections
 import com.trifcdr.navigationapi.NavigationApi
-import com.trifcdr.registration.RegistrationFragmentDirections
-import com.trifcdr.registration.navigation.RegistrationDirections
 import javax.inject.Inject
 import javax.inject.Provider
 
@@ -14,7 +12,7 @@ import javax.inject.Provider
  */
 class ChatsNavigationImpl @Inject constructor(
     private val navController: Provider<NavController>,
-): NavigationApi<ChatsDirections> {
+) : NavigationApi<ChatsDirections> {
 
     override fun navigate(direction: ChatsDirections) {
         when (direction) {

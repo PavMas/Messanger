@@ -66,5 +66,6 @@ dependencies {
     implementation(project(":Authorization"))
     implementation(project(":Registration"))
     implementation(project(":Chats"))
+    implementation(project(":Profile"))
 
 }

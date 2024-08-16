@@ -29,11 +29,6 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="from_auth_to_register">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -67,6 +62,27 @@
                           <Point>
                             <option name="x" value="-219" />
                             <option name="y" value="355" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="from_auth_to_register">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="profileFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-352" />
+                            <option name="y" value="14" />
                           </Point>
                         </option>
                       </LayoutPositions>

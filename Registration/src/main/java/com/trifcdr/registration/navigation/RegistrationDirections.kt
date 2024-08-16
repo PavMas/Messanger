@@ -6,4 +6,6 @@ package com.trifcdr.registration.navigation
 sealed interface RegistrationDirections {
 
     data object ToAuthorization: RegistrationDirections
+
+    data object ToProfile: RegistrationDirections
 }

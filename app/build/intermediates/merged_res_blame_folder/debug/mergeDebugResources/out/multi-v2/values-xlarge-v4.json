@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-58:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-59:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\afaf4e890dca67094b9f62cb253adbb0\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",

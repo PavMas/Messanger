@@ -16,6 +16,9 @@
         <action
             android:id="@+id/from_auth_to_code"
             app:destination="@id/checkCodeFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
 
     </fragment>
     <fragment
@@ -33,7 +36,7 @@
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.trifcdr.registration.RegistrationFragment"
+        android:name="com.trifcdr.registration.fragment.RegistrationFragment"
         android:label="RegistrationFragment"
         tools:layout="@layout/fragment_registration">
         <action
@@ -42,6 +45,9 @@
         <argument
             android:name="phone"
             app:argType="com.trifcdr.registration.navigation.RegistrationArgs" />
+        <action
+            android:id="@+id/from_register_to_profile"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatsFragment"
@@ -52,8 +58,12 @@
             android:id="@+id/from_chats_to_auth"
             app:destination="@id/authorizationFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.trifcdr.profile.ProfileFragment"
+        android:label="ProfileFragment" />
 
-<!--    <fragment-->
+    <!--    <fragment-->
 <!--        android:id="@+id/feature3Fragment"-->
 <!--        android:name="ai.doubletapp.sample.navigation.feature3.Feature3Fragment"-->
 <!--        android:label="Feature3Fragment"-->

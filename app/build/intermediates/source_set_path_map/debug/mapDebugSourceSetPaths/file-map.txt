@@ -62,8 +62,7 @@ com.trifcdr.messanger.app-packageDebugResources-60 C:\Users\pasha\AndroidStudioP
 com.trifcdr.messanger.app-debug-61 C:\Users\pasha\AndroidStudioProjects\Messanger\app\build\intermediates\merged_res\debug\mergeDebugResources
 com.trifcdr.messanger.app-debug-62 C:\Users\pasha\AndroidStudioProjects\Messanger\app\src\debug\res
 com.trifcdr.messanger.app-main-63 C:\Users\pasha\AndroidStudioProjects\Messanger\app\src\main\res
-com.trifcdr.messanger.app-debug-64 C:\Users\pasha\AndroidStudioProjects\Messanger\core\common\build\intermediates\packaged_res\debug\packageDebugResources
-com.trifcdr.messanger.app-debug-65 C:\Users\pasha\AndroidStudioProjects\Messanger\core\data\build\intermediates\packaged_res\debug\packageDebugResources
-com.trifcdr.messanger.app-debug-66 C:\Users\pasha\AndroidStudioProjects\Messanger\core\network\build\intermediates\packaged_res\debug\packageDebugResources
-com.trifcdr.messanger.app-debug-67 C:\Users\pasha\AndroidStudioProjects\Messanger\core\storage\build\intermediates\packaged_res\debug\packageDebugResources
-com.trifcdr.messanger.app-debug-68 C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\build\intermediates\packaged_res\debug\packageDebugResources
+com.trifcdr.messanger.app-debug-64 C:\Users\pasha\AndroidStudioProjects\Messanger\core\data\build\intermediates\packaged_res\debug\packageDebugResources
+com.trifcdr.messanger.app-debug-65 C:\Users\pasha\AndroidStudioProjects\Messanger\core\network\build\intermediates\packaged_res\debug\packageDebugResources
+com.trifcdr.messanger.app-debug-66 C:\Users\pasha\AndroidStudioProjects\Messanger\core\storage\build\intermediates\packaged_res\debug\packageDebugResources
+com.trifcdr.messanger.app-debug-67 C:\Users\pasha\AndroidStudioProjects\Messanger\navigationimpl\build\intermediates\packaged_res\debug\packageDebugResources

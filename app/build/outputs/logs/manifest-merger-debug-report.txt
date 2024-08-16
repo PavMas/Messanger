@@ -10,7 +10,7 @@ MERGED from [:Registration] C:\Users\pasha\AndroidStudioProjects\Messanger\Regis
 MERGED from [:Profile] C:\Users\pasha\AndroidStudioProjects\Messanger\Profile\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:Chats] C:\Users\pasha\AndroidStudioProjects\Messanger\Chats\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\pasha\.gradle\caches\transforms-4\bcc0f765e4ea124c8efdfd6508296b96\transformed\jetified-viewbinding-8.5.1\AndroidManifest.xml:2:1-7:12
-MERGED from [:core:common] C:\Users\pasha\AndroidStudioProjects\Messanger\core\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:common] C:\Users\pasha\AndroidStudioProjects\Messanger\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:core:data] C:\Users\pasha\AndroidStudioProjects\Messanger\core\data\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:core:network] C:\Users\pasha\AndroidStudioProjects\Messanger\core\network\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:core:storage] C:\Users\pasha\AndroidStudioProjects\Messanger\core\storage\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
@@ -178,8 +178,8 @@ MERGED from [:Chats] C:\Users\pasha\AndroidStudioProjects\Messanger\Chats\build\
 MERGED from [:Chats] C:\Users\pasha\AndroidStudioProjects\Messanger\Chats\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\pasha\.gradle\caches\transforms-4\bcc0f765e4ea124c8efdfd6508296b96\transformed\jetified-viewbinding-8.5.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\pasha\.gradle\caches\transforms-4\bcc0f765e4ea124c8efdfd6508296b96\transformed\jetified-viewbinding-8.5.1\AndroidManifest.xml:5:5-44
-MERGED from [:core:common] C:\Users\pasha\AndroidStudioProjects\Messanger\core\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
-MERGED from [:core:common] C:\Users\pasha\AndroidStudioProjects\Messanger\core\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:common] C:\Users\pasha\AndroidStudioProjects\Messanger\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:common] C:\Users\pasha\AndroidStudioProjects\Messanger\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:core:data] C:\Users\pasha\AndroidStudioProjects\Messanger\core\data\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:core:data] C:\Users\pasha\AndroidStudioProjects\Messanger\core\data\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:core:network] C:\Users\pasha\AndroidStudioProjects\Messanger\core\network\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44

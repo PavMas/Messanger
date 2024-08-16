@@ -150,6 +150,7 @@
     <attr format="reference" name="extendedFloatingActionButtonStyle"/>
     <attr format="reference" name="extendedFloatingActionButtonSurfaceStyle"/>
     <attr format="reference" name="extendedFloatingActionButtonTertiaryStyle"/>
+    <attr format="reference" name="fastscroll__style"/>
     <attr format="reference" name="floatingActionButtonLargePrimaryStyle"/>
     <attr format="reference" name="floatingActionButtonLargeSecondaryStyle"/>
     <attr format="reference" name="floatingActionButtonLargeStyle"/>
@@ -646,6 +647,7 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="black">#FF000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -660,6 +662,8 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="defaultBorderFlagColor">@android:color/transparent</color>
+    <color name="defaultContentColor">@android:color/black</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -703,6 +707,7 @@
     <color name="error_color_material_light">#ff5722</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="green">#00FF04</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="m3_ref_palette_black">#ff000000</color>
@@ -944,6 +949,7 @@
     <color name="mtrl_textinput_hovered_box_stroke_color">#DE000000</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="pressed_bg">#64b7b7b7</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -952,6 +958,7 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="red">#FF0000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -962,8 +969,10 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="test">#221224</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -1049,6 +1058,7 @@
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
+    <dimen name="ccp_padding">8dp</dimen>
     <dimen name="clock_face_margin_start">64dp</dimen>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
     <dimen name="compat_button_inset_vertical_material">6dp</dimen>
@@ -1108,9 +1118,18 @@
     <dimen name="design_textinput_caption_translate_y">5dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fastscroll__bubble_corner">20dp</dimen>
+    <dimen name="fastscroll__bubble_size">50dp</dimen>
+    <dimen name="fastscroll__handle_clickable_width">24dp</dimen>
+    <dimen name="fastscroll__handle_corner">3dp</dimen>
+    <dimen name="fastscroll__handle_height">30dp</dimen>
+    <dimen name="fastscroll__handle_inset">9dp</dimen>
+    <dimen name="fastscroll__handle_padding">2dp</dimen>
+    <dimen name="fastscroll__handle_width">6dp</dimen>
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
+    <dimen name="google_1x">8dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -1996,8 +2015,13 @@
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
+    <string name="check_code">Проверить</string>
+    <string name="clear_search_button_content_description">Clear search</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="dest_title">destination title</string>
+    <string name="digits">Цифры от 0 до 9</string>
+    <string name="dismiss_button_content_description">Dismiss</string>
+    <string name="do_register">Зарегистрироваться</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
@@ -2005,9 +2029,14 @@
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="get_code">Получить код</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="id">ID</string>
+    <string name="inst">Instagram</string>
     <string name="item_view_role_description">Tab</string>
+    <string name="logout">Выйти из аккаунта</string>
+    <string name="lower_case">Строчные латинские буквы: от a до z</string>
     <string name="m3_exceed_max_badge_text_suffix" translatable="false"><ns2:g example="Some te" id="part of a long text">%1$s</ns2:g><ns2:g example="…" id="suffix">%2$s</ns2:g></string>
     <string name="m3_ref_typeface_brand_medium" translatable="false">sans-serif-medium</string>
     <string name="m3_ref_typeface_brand_regular" translatable="false">sans-serif</string>
@@ -2114,22 +2143,33 @@
     <string name="mtrl_switch_track_path" translatable="false">M0,16 A16,16 0 0,1 16,0 H36 A16,16 0 0,1 36,32 H16 A16,16 0 0,1 0,16</string>
     <string description="Button text to indicate that the widget will ignore the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_cancel">Cancel</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
+    <string name="name">Имя</string>
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
+    <string name="no_result_found">Results not found</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="phone">Телефон</string>
+    <string name="phone_hint">Номер телефона</string>
+    <string name="registration">Регистрация</string>
+    <string name="search_hint">Search…</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
   </string>
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
+    <string name="select_country">Select a country</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="symbols">Символы: - _</string>
+    <string name="upper_case">Заглавные латинские буквы: от A до Z</string>
+    <string name="username">Имя пользователя</string>
+    <string name="vk">ВКонтакте</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -11236,6 +11276,144 @@
             <flag name="all" value="0x77"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="CountryCodePicker">
+        
+        <attr format="integer" name="ccp_defaultPhoneCode"/>
+        <attr format="color" name="ccp_contentColor"/>
+        <attr format="color" name="ccp_arrowColor"/>
+        <attr format="dimension" name="ccp_textSize"/>
+        <attr format="dimension" name="ccp_arrowSize"/>
+        <attr format="string" name="ccp_customMasterCountries"/>
+        <attr format="string" name="ccp_excludedCountries"/>
+        <attr format="color" name="ccp_flagBorderColor"/>
+        <attr format="string" name="ccp_countryPreference"/>
+        <attr format="string" name="ccp_defaultNameCode"/>
+        <attr format="string" name="ccp_selectionMemoryTag"/>
+        <attr format="boolean" name="ccp_useFlagEmoji"/> 
+        <attr format="boolean" name="ccp_useDummyEmojiForPreview"/> 
+
+        <attr format="enum" name="ccp_textGravity">
+            <enum name="LEFT" value="-1"/>
+            <enum name="RIGHT" value="1"/>
+            <enum name="CENTER" value="0"/>
+        </attr>
+        <attr format="enum" name="ccp_hintExampleNumberType">
+            <enum name="MOBILE" value="0"/>
+            <enum name="FIXED_LINE" value="1"/>
+            <enum name="FIXED_LINE_OR_MOBILE" value="2"/>
+            <enum name="TOLL_FREE" value="3"/>
+            <enum name="PREMIUM_RATE" value="4"/>
+            <enum name="SHARED_COST" value="5"/>
+            <enum name="VOIP" value="6"/>
+            <enum name="PERSONAL_NUMBER" value="7"/>
+            <enum name="PAGER" value="8"/>
+            <enum name="UAN" value="9"/>
+            <enum name="VOICEMAIL" value="10"/>
+            <enum name="UNKNOWN" value="11"/>
+
+        </attr>
+
+
+        
+        <attr format="dimension" name="ccp_padding"/>
+
+        
+        <attr format="boolean" name="ccp_showNameCode"/>
+        <attr format="boolean" name="ccp_showFlag"/>
+        <attr format="boolean" name="ccp_showFullName"/>
+	      <attr format="boolean" name="ccp_internationalFormattingOnly"/>
+        <attr format="boolean" name="ccp_clickable"/>
+        <attr format="boolean" name="ccp_showPhoneCode"/>
+        <attr format="boolean" name="ccp_autoDetectLanguage"/>
+        <attr format="boolean" name="ccp_autoDetectCountry"/>
+        <attr format="boolean" name="ccp_areaCodeDetectedCountry"/>
+        <attr format="boolean" name="ccp_autoFormatNumber"/>
+        <attr format="boolean" name="ccp_hintExampleNumber"/>
+        <attr format="boolean" name="ccp_rememberLastSelection"/>
+        <attr format="boolean" name="ccp_showArrow"/>
+        <attr format="boolean" name="ccp_rippleEnable"/>
+
+        
+        <attr format="boolean" name="ccpDialog_keyboardAutoPopup"/>
+        <attr format="boolean" name="ccpDialog_allowSearch"/>
+        <attr format="boolean" name="ccpDialog_showPhoneCode"/>
+        <attr format="boolean" name="ccpDialog_showNameCode"/>
+        <attr format="boolean" name="ccpDialog_showFlag"/>
+        <attr format="boolean" name="ccpDialog_showFastScroller"/>
+        <attr format="color" name="ccpDialog_fastScroller_bubbleColor"/>
+        <attr format="color" name="ccpDialog_fastScroller_handleColor"/>
+        <attr format="reference" name="ccpDialog_fastScroller_bubbleTextAppearance"/>
+        <attr format="reference" name="ccpDialog_backgroundColor"/>
+        <attr format="reference" name="ccpDialog_background"/>
+        <attr format="dimension" name="ccpDialog_cornerRadius"/>
+        <attr format="color" name="ccpDialog_textColor"/>
+        <attr format="color" name="ccpDialog_searchEditTextTint"/>
+        <attr format="boolean" name="ccpDialog_showCloseIcon"/>
+        <attr format="boolean" name="ccpDialog_showTitle"/>
+        <attr format="boolean" name="ccpDialog_initialScrollToSelection"/>
+        <attr format="boolean" name="ccpDialog_rippleEnable"/>
+        
+        
+        <attr format="enum" name="ccp_defaultLanguage">
+            <enum name="AFRIKAANS" value="0"/>
+            <enum name="ARABIC" value="1"/>
+            <enum name="BASQUE" value="2"/>
+            <enum name="BENGALI" value="3"/>
+            <enum name="CHINESE_SIMPLIFIED" value="4"/>
+            <enum name="CHINESE_TRADITIONAL" value="5"/>
+            <enum name="CZECH" value="6"/>
+            <enum name="DANISH" value="7"/>
+            <enum name="DUTCH" value="8"/>
+            <enum name="ENGLISH" value="9"/>
+            <enum name="FARSI" value="10"/>
+            <enum name="FRENCH" value="11"/>
+            <enum name="GERMAN" value="12"/>
+            <enum name="GREEK" value="13"/>
+            <enum name="GUJARATI" value="14"/>
+            <enum name="HEBREW" value="15"/>
+            <enum name="HINDI" value="16"/>
+            <enum name="HUNGARIAN" value="17"/>
+            <enum name="INDONESIA" value="18"/>
+            <enum name="ITALIAN" value="19"/>
+            <enum name="JAPANESE" value="20"/>
+            <enum name="KAZAKH" value="21"/>
+            <enum name="KOREAN" value="22"/>
+            <enum name="MARATHI" value="23"/>
+            <enum name="POLISH" value="24"/>
+            <enum name="PORTUGUESE" value="25"/>
+            <enum name="PUNJABI" value="26"/>
+            <enum name="RUSSIAN" value="27"/>
+            <enum name="SLOVAK" value="28"/>
+            <enum name="SLOVENIAN" value="29"/>
+            <enum name="SPANISH" value="30"/>
+            <enum name="SWEDISH" value="31"/>
+            <enum name="TAGALOG" value="32"/>
+            <enum name="THAI" value="33"/>
+            <enum name="TURKISH" value="34"/>
+            <enum name="UKRAINIAN" value="35"/>
+            <enum name="URDU" value="36"/>
+            <enum name="UZBEK" value="37"/>
+            <enum name="VIETNAMESE" value="38"/>
+        </attr>
+
+        <attr format="enum" name="ccp_countryAutoDetectionPref">
+            <enum name="SIM_ONLY" value="1"/>
+            <enum name="NETWORK_ONLY" value="2"/>
+            <enum name="LOCALE_ONLY" value="3"/>
+            <enum name="SIM_NETWORK" value="12"/>
+            <enum name="NETWORK_SIM" value="21"/>
+            <enum name="SIM_LOCALE" value="13"/>
+            <enum name="LOCALE_SIM" value="31"/>
+            <enum name="NETWORK_LOCALE" value="23"/>
+            <enum name="LOCALE_NETWORK" value="32"/>
+            <enum name="SIM_NETWORK_LOCALE" value="123"/>
+            <enum name="SIM_LOCALE_NETWORK" value="132"/>
+            <enum name="NETWORK_SIM_LOCALE" value="213"/>
+            <enum name="NETWORK_LOCALE_SIM" value="231"/>
+            <enum name="LOCALE_SIM_NETWORK" value="312"/>
+            <enum name="LOCALE_NETWORK_SIM" value="321"/>
+        </attr>
+    </declare-styleable>
     <declare-styleable name="CustomAttribute">
         <attr format="string" name="attributeName"/>
         <attr format="string" name="methodName"/>
@@ -13660,6 +13838,11 @@
         <attr format="reference" name="ifTagSet"/>
         <attr format="reference" name="ifTagNotSet"/>
     </declare-styleable>
+    <declare-styleable name="fastscroll__fastScroller">
+	    <attr format="color" name="fastscroll__bubbleColor"/>
+	    <attr format="color" name="fastscroll__handleColor"/>
+	    <attr format="reference" name="fastscroll__bubbleTextAppearance"/>
+	</declare-styleable>
     <declare-styleable name="include">
         <attr name="constraintSet"/>
     </declare-styleable>

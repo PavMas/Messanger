@@ -59,8 +59,5 @@ dependencies {
     implementation(project(":di"))
     implementation(project(":navigationapi"))
     implementation(project(":domain"))
-    implementation(project(":core:common"))
-    implementation(project(":core:data"))
-    implementation(project(":core:network"))
-    implementation(project(":core:storage"))
+    implementation(project(":common"))
 }

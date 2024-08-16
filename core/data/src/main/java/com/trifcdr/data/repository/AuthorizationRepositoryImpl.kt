@@ -11,8 +11,9 @@ import com.trifcdr.network.model.SendCodeRequestModel
 import com.trifcdr.network.retrofit.PlannerokApi
 import com.trifcdr.storage.AppStorage
 import retrofit2.HttpException
+import javax.inject.Inject
 
-class AuthorizationRepositoryImpl(
+class AuthorizationRepositoryImpl @Inject constructor(
     private val api: PlannerokApi,
     private val storage: AppStorage,
 ) : AuthorizationRepository {

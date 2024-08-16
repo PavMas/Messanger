@@ -68,5 +68,4 @@ dependencies {
     implementation(project(":Registration"))
     implementation(project(":Profile"))
     implementation(project(":Chats"))
-    implementation(project(":core:common"))
 }

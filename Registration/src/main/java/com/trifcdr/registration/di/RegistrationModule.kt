@@ -16,18 +16,5 @@ import dagger.Provides
 @Module
 class RegistrationModule {
 
-    @Provides
-    fun provideRegistrationRepository(plannerokApi: PlannerokApi,
-                                       appStorage: AppStorage): RegistrationRepository{
-        return RegistrationRepositoryImpl(
-            plannerokApi,
-            appStorage
-        )
-    }
 
-    @Provides
-    fun providePlannerokApi() = PlannerokApi.getInstance()
-
-    @Provides
-    fun provideAppStorage(context: Context): AppStorage = AppStorageImpl(context)
 }

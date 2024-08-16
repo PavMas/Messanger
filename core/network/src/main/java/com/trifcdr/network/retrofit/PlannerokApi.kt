@@ -6,7 +6,10 @@ import com.trifcdr.network.model.CheckCodeRequestModel
 import com.trifcdr.network.model.RegisterUserDataModel
 import com.trifcdr.network.model.RegisterUserRequestModule
 import com.trifcdr.network.model.SendCodeRequestModel
-import com.trifcdr.network.model.UserDataModel
+import com.trifcdr.network.model.ProfileData
+import com.trifcdr.network.model.ProfileDataModel
+import com.trifcdr.network.model.RefreshTokenModel
+import com.trifcdr.network.model.RefreshTokenRequestModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -28,7 +31,11 @@ interface PlannerokApi {
     suspend fun registerUser(@Body body: RegisterUserRequestModule): RegisterUserDataModel
 
     @GET("/api/v1/users/me/")
-    suspend fun getUserData(@Header("Authorization") token: String): UserDataModel
+    suspend fun getUserData(@Header("Authorization") token: String): ProfileDataModel
+
+    @POST("/api/v1/users/refresh-token/")
+    suspend fun refreshAccessToken(@Body body: RefreshTokenRequestModel): RefreshTokenModel
+
 
     companion object {
         private var plannerokApiService: PlannerokApi? = null

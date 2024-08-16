@@ -18,19 +18,6 @@ import dagger.Provides
 class AuthorizationModule {
 
 
-    @Provides
-    fun provideAuthorizationRepository(plannerokApi: PlannerokApi,
-                                       appStorage: AppStorage): AuthorizationRepository{
-        return AuthorizationRepositoryImpl(
-            plannerokApi,
-            appStorage
-        )
-    }
 
-    @Provides
-    fun provideAuthorizationApi() = PlannerokApi.getInstance()
-
-    @Provides
-    fun provideAppStorage(context: Context): AppStorage = AppStorageImpl(context)
 
 }

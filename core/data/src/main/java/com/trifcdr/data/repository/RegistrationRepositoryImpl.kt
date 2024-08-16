@@ -10,11 +10,12 @@ import com.trifcdr.domain.repository.RegistrationRepository
 import com.trifcdr.network.retrofit.PlannerokApi
 import com.trifcdr.storage.AppStorage
 import retrofit2.HttpException
+import javax.inject.Inject
 
 /**
  * Created by trifcdr.
  */
-class RegistrationRepositoryImpl(
+class RegistrationRepositoryImpl @Inject constructor(
     private val api: PlannerokApi,
     private val storage: AppStorage
 ): RegistrationRepository {

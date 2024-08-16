@@ -42,15 +42,11 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation (libs.okhttp)
-    implementation (libs.logging.interceptor)
-    kapt(libs.kotlinx.metadata.jvm)
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 
-    implementation(project(":core:network"))
-    implementation(project(":core:data"))
     implementation(project(":domain"))
+    implementation(project(":core:data"))
+    implementation(project(":core:network"))
+    implementation(project(":core:storage"))
 }

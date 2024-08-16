@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.navigationimpl.test.navigationimpl-mergeDebugAndroidTestResources-51:/values-v18/values-v18.xml",
+            "outputFile": "com.trifcdr.navigationimpl.test.navigationimpl-mergeDebugAndroidTestResources-62:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\d8c223d4e63db33141e841377524a569\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\afaf4e890dca67094b9f62cb253adbb0\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\c5e5af2b107de148684ff18f41bb02d1\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\e84b7fa8281ac7d020a757edbc7e633b\\transformed\\jetified-core-1.5.0\\res\\values-v18\\values.xml",
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",

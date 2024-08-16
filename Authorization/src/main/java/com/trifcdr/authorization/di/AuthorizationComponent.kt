@@ -2,13 +2,14 @@ package com.trifcdr.authorization.di
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
+import com.trifcdr.common.di.CommonModule
 import dagger.BindsInstance
 import dagger.Component
 
 
 @Component(
     dependencies = [AuthorizationDependencies::class],
-    modules = [ViewModelModule::class, AuthorizationModule::class]
+    modules = [ViewModelModule::class, CommonModule::class]
 )
 interface AuthorizationComponent: AuthorizationApi {
 

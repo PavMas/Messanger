@@ -50,4 +50,5 @@ dependencies {
 
     implementation(project(":di"))
     implementation(project(":navigationapi"))
+    implementation(project(":common"))
 }

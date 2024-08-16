@@ -10,5 +10,7 @@ sealed interface AuthorizationDirections {
 
     data class ToRegistration(val args: CheckCodeToRegistrationArgs): AuthorizationDirections
 
+    data object ToProfile: AuthorizationDirections
+
 
 }

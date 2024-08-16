@@ -74,7 +74,9 @@ class AuthCodeFragment : Fragment() {
                 if (!checkCodeResult.result.isUserExist){
                     navigationApi.navigate(AuthorizationDirections.ToRegistration(getRegistrationArgs()))
                 }
-                Toast.makeText(context, checkCodeResult.result.userId.toString(), Toast.LENGTH_SHORT).show()
+                else{
+                    navigationApi.navigate(AuthorizationDirections.ToProfile)
+                }
             }
             if (checkCodeResult is DomainResource.Failure){
                 Toast.makeText(context, checkCodeResult.exception.message, Toast.LENGTH_LONG).show()

@@ -37,6 +37,11 @@ class AuthorizationNavigationImpl @Inject constructor(
                     )
                 )
             }
+            is AuthorizationDirections.ToProfile -> {
+                navController.get().navigate(
+                    AuthCodeFragmentDirections.fromCheckCodeToProfile()
+                )
+            }
         }
     }
 

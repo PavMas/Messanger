@@ -24,7 +24,7 @@ class AppStorageImpl(context: Context) : AppStorage {
         val refreshTokenKey = stringPreferencesKey(REFRESH_TOKEN)
         CoroutineScope(Dispatchers.IO).launch {
             dataStore.edit { settings ->
-                settings[accessTokenKey] = accessToken
+                settings[accessTokenKey] = "Bearer $accessToken"
                 settings[refreshTokenKey] = refreshToken
             }
         }.join()

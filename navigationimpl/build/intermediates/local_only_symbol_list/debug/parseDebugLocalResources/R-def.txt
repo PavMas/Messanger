@@ -9,6 +9,7 @@ id from_auth_to_chats
 id from_auth_to_code
 id from_auth_to_register
 id from_chats_to_auth
+id from_check_code_to_profile
 id from_register_to_auth
 id from_register_to_profile
 id nav_graph

@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 class AuthorizationRepositoryImpl @Inject constructor(
     private val api: PlannerokApi,
-    private val storage: AppStorage,
+    private val storage: AppStorage
 ) : AuthorizationRepository {
 
     override suspend fun sendAuthCode(phone: String): DomainResource<AuthCode> {

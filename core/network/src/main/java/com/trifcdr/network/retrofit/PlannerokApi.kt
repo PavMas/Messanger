@@ -1,5 +1,7 @@
 package com.trifcdr.network.retrofit
 
+import com.google.gson.Gson
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.trifcdr.network.model.AuthCodeModel
 import com.trifcdr.network.model.AuthDataModel
 import com.trifcdr.network.model.CheckCodeRequestModel
@@ -10,6 +12,9 @@ import com.trifcdr.network.model.ProfileData
 import com.trifcdr.network.model.ProfileDataModel
 import com.trifcdr.network.model.RefreshTokenModel
 import com.trifcdr.network.model.RefreshTokenRequestModel
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -40,6 +45,7 @@ interface PlannerokApi {
     companion object {
         private var plannerokApiService: PlannerokApi? = null
 
+        @OptIn(ExperimentalSerializationApi::class)
         fun getInstance() : PlannerokApi {
             if(plannerokApiService == null){
                 val logging = HttpLoggingInterceptor()
@@ -47,10 +53,14 @@ interface PlannerokApi {
                 val client = OkHttpClient.Builder()
                     .addInterceptor(logging)
                     .build()
+
+                val contentType = "application/json".toMediaType()
+                val json = Json { ignoreUnknownKeys = true }
+                val kotlinxConverterFactory = json.asConverterFactory(contentType)
                 val retrofit = Retrofit.Builder()
                     .baseUrl("https://plannerok.ru/")
                     .client(client)
-                    .addConverterFactory(GsonConverterFactory.create())
+                    .addConverterFactory(kotlinxConverterFactory)
                     .build()
                 plannerokApiService = retrofit.create(PlannerokApi::class.java)
             }

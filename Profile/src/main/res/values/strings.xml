@@ -4,4 +4,5 @@
     <string name="vk">ВКонтакте</string>
     <string name="inst">Instagram</string>
     <string name="logout">Выйти из аккаунта</string>
+    <string name="no_data">Нет данных</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.trifcdr.profile.di
 
 import androidx.lifecycle.ViewModel
+import com.trifcdr.data.di.DataModule
 import dagger.Component
 
 /**
@@ -9,7 +10,7 @@ import dagger.Component
 
 @Component(
     dependencies = [ProfileDependencies::class],
-    modules = [ViewModelModule::class, ProfileModule::class]
+    modules = [ViewModelModule::class, DataModule::class]
 )
 interface ProfileComponent: ProfileApi {
 

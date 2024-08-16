@@ -32,6 +32,9 @@
         <argument
             android:name="phone"
             app:argType="com.trifcdr.authorization.navigation.CheckCodeArgs" />
+        <action
+            android:id="@+id/from_check_code_to_profile"
+            app:destination="@id/profileFragment" />
     </fragment>
 
     <fragment
@@ -60,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.trifcdr.profile.ProfileFragment"
+        android:name="com.trifcdr.profile.fragment.ProfileFragment"
         android:label="ProfileFragment" />
 
     <!--    <fragment-->

@@ -13,12 +13,17 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-132" />
-                            <option name="y" value="-8" />
+                            <option name="x" value="-129" />
+                            <option name="y" value="-12" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_authorizationFragment_to_profileFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="from_auth_to_chats">
                               <value>
                                 <LayoutPositions />
@@ -60,13 +65,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-219" />
-                            <option name="y" value="355" />
+                            <option name="x" value="-295" />
+                            <option name="y" value="395" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="from_auth_to_register">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="from_check_code_to_profile">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -81,8 +91,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-352" />
-                            <option name="y" value="14" />
+                            <option name="x" value="-392" />
+                            <option name="y" value="7" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -100,6 +110,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="from_register_to_auth">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="from_register_to_profile">
                               <value>
                                 <LayoutPositions />
                               </value>

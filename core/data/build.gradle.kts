@@ -38,6 +38,7 @@ dependencies {
     implementation(project(":core:network"))
     implementation(project(":core:storage"))
     implementation(project(":domain"))
+    implementation(project(":common"))
 
     implementation(libs.retrofit)
     implementation(libs.converter.gson)

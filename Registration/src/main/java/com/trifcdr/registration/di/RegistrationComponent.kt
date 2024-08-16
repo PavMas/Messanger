@@ -1,7 +1,7 @@
 package com.trifcdr.registration.di
 
 import androidx.lifecycle.ViewModel
-import com.trifcdr.common.di.CommonModule
+import com.trifcdr.data.di.DataModule
 import dagger.Component
 
 /**
@@ -10,13 +10,12 @@ import dagger.Component
 
 @Component(
     dependencies = [RegistrationDependencies::class],
-    modules = [CommonModule::class, ViewModelModule::class]
+    modules = [DataModule::class, ViewModelModule::class]
 )
 
 interface RegistrationComponent: RegistrationApi {
 
     fun getMap(): Map<Class<*>, ViewModel>
-
 
     @Component.Factory
     interface Factory {

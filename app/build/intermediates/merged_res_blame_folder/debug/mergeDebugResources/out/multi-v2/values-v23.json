@@ -4,7 +4,7 @@
             "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-59:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\e5bf795a4c06df69238a08896b165bec\\transformed\\material-1.11.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\a115b37b88fc7fadab34c135166049ae\\transformed\\material-1.11.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\afaf4e890dca67094b9f62cb253adbb0\\transformed\\appcompat-1.6.1\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\af63d8b29779f6f92b2fa94b4d9f04fd\\transformed\\appcompat-1.6.1\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\f0a90ab6ffbd30ce44cb63111cf473a8\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\65ca2f9f8d106a0a5ac22282feb59560\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

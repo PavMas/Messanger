@@ -5,15 +5,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.trifcdr.domain.models.DomainResource
+import com.trifcdr.domain.models.ProfileData
 import com.trifcdr.navigationapi.NavigationApi
 import com.trifcdr.profile.R
 import com.trifcdr.profile.databinding.FragmentProfileBinding
 import com.trifcdr.profile.di.ProfileComponentHolder
 import com.trifcdr.profile.navigation.ProfileDirections
+import com.trifcdr.profile.navigation.ProfileToEditArgs
 import com.trifcdr.profile.viewmodel.ProfileViewModel
 import com.trifcdr.profile.viewmodel.ProfileViewModuleFactory
 import javax.inject.Inject
@@ -32,6 +35,7 @@ class ProfileFragment: Fragment() {
     private lateinit var birthday: TextView
     private lateinit var horoscope: TextView
 
+    private lateinit var editProfile: Button
 
     @Inject
     lateinit var profileViewModelFactory: ProfileViewModuleFactory
@@ -48,15 +52,34 @@ class ProfileFragment: Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         init()
-//        setClickListeners()
         setProfileDataObserver()
         return binding.root
+    }
+
+    private fun setEditClickListener(data: ProfileData) {
+        editProfile.setOnClickListener {
+            navigationApi.navigate(ProfileDirections.ToProfileEdit(
+                ProfileToEditArgs(
+                    id = data.id,
+                    phone = data.phone,
+                    name = data.name,
+                    username = data.username,
+                    birthday = data.birthday ?: "",
+                    city = data.city ?: "",
+                    vk = data.vk ?: "",
+                    instagram = data.instagram ?: "",
+                    status = data.status ?: "",
+                    avatar = data.avatar ?: ""
+                )
+            ))
+        }
     }
 
     private fun setProfileDataObserver() {
         viewModel.resultProfileData.observe(viewLifecycleOwner){ profileData ->
             if (profileData is DomainResource.Success){
                 val res = profileData.result
+                setEditClickListener(res)
                 nickname.text = res.username
                 id.text = res.id.toString()
                 phone.text = buildString {
@@ -83,6 +106,7 @@ class ProfileFragment: Fragment() {
     private fun init() {
         viewModel = ViewModelProvider(this, profileViewModelFactory)[ProfileViewModel::class]
         nickname = binding.nickname
+        editProfile = binding.editProfile
         id = binding.id
         phone = binding.phone
         city = binding.city

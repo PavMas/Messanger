@@ -10,10 +10,13 @@ id from_auth_to_code
 id from_auth_to_register
 id from_chats_to_auth
 id from_check_code_to_profile
+id from_profile_edit_to_profile
+id from_profile_to_profile_edit
 id from_register_to_auth
 id from_register_to_profile
 id nav_graph
 id nav_host
+id profileEditFragment
 id profileFragment
 id registrationFragment
 layout fragment_navigation

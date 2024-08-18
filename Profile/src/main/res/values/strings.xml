@@ -5,4 +5,20 @@
     <string name="inst">Instagram</string>
     <string name="logout">Выйти из аккаунта</string>
     <string name="no_data">Нет данных</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="profile_edit">Редактирование профиля</string>
+    <string name="name">Имя</string>
+    <string name="birthday">Дата рождения</string>
+    <string name="city">Город</string>
+    <string name="vk_link">Ссылка на ВКонтакте</string>
+    <string name="instagram">Ссылка на Instagram</string>
+    <string name="status">Статус</string>
+    <string name="storage_denied">Использование хранилища запрещено</string>
+    <string name="upload_from">Выбрать фото из:</string>
+    <string name="take_photo">Сделать фото</string>
+    <string name="upload_from_gallery">Выбрать из галереи</string>
+    <string name="upload_avatar">Загрузить аватар</string>
+    <string name="save">Сохранить</string>
+    <string name="username">Имя пользователя</string>
+    <string name="phone">Телефон</string>
 </resources>

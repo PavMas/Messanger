@@ -1,9 +1,14 @@
 package com.trifcdr.data.repository
 
 import com.trifcdr.data.mapper.mapProfileDataToDomain
+import com.trifcdr.data.mapper.mapUpdateDataToData
+import com.trifcdr.data.mapper.mapUserDataToStorage
+import com.trifcdr.data.mapper.mapUserStorageDataToDomain
 import com.trifcdr.domain.models.DomainResource
 import com.trifcdr.domain.models.ProfileData
+import com.trifcdr.domain.models.ProfileDataRequest
 import com.trifcdr.domain.repository.ProfileRepository
+import com.trifcdr.network.model.ProfileDataModel
 import com.trifcdr.network.model.Resource
 import com.trifcdr.network.repository.ApiServiceRepository
 import com.trifcdr.network.retrofit.PlannerokApi
@@ -25,8 +30,14 @@ class ProfileRepositoryImpl @Inject constructor(
 
     override suspend fun getProfileData(): DomainResource<ProfileData> {
         return try {
-            val token = storage.getAccessToken()
-            val res = api.getUserData(token)
+            val res: ProfileDataModel
+            if (!storage.isAuthorized()){
+                val token = storage.getAccessToken()
+                res = api.getUserData(token)
+                storage.saveUserData(mapUserDataToStorage(res))
+            } else{
+                res = mapUserStorageDataToDomain(storage.getUserData())
+            }
             DomainResource.Success(mapProfileDataToDomain(res))
 
         } catch (error: HttpException) {
@@ -43,6 +54,16 @@ class ProfileRepositoryImpl @Inject constructor(
                 }
             }
             DomainResource.Unauthorized
+        }
+    }
+
+    override suspend fun updateProfileData(data: ProfileDataRequest): DomainResource<Boolean> {
+        return try{
+            api.updateUserData(storage.getAccessToken(), mapUpdateDataToData(data))
+            storage.saveUserData(mapUserDataToStorage(data))
+            DomainResource.Success(true)
+        }catch (e: Exception){
+            DomainResource.Failure(e)
         }
     }
 }

@@ -64,7 +64,22 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.trifcdr.profile.fragment.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/from_profile_to_profile_edit"
+            app:destination="@id/profileEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.trifcdr.profile.fragment.ProfileEditFragment"
+        android:label="ProfileEditFragment" >
+        <action
+            android:id="@+id/from_profile_edit_to_profile"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="profileData"
+            app:argType="com.trifcdr.profile.navigation.ProfileEditArgs" />
+    </fragment>
 
     <!--    <fragment-->
 <!--        android:id="@+id/feature3Fragment"-->

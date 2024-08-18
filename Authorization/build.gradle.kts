@@ -1,10 +1,8 @@
-import org.jetbrains.kotlin.gradle.targets.js.npm.importedPackageDir
-
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id ("kotlin-kapt")
-    id ("kotlin-parcelize")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 
 
 }
@@ -37,10 +35,7 @@ android {
         jvmTarget = "1.8"
     }
 
-    kapt {
-        generateStubs = true
-    }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 

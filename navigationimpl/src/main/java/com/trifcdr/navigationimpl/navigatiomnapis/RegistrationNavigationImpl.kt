@@ -16,13 +16,6 @@ internal class RegistrationNavigationImpl @Inject constructor(
 
     override fun navigate(direction: RegistrationDirections) {
         when (direction) {
-//            is RegistrationDirections.ToAuthorization -> {
-//                navController.get().navigate(
-//                    Feature2FragmentDirections.fromFeature2ToFeature3(
-//                        args = direction.args.toFeature3Args(),
-//                    )
-//                )
-//            }
             is RegistrationDirections.ToAuthorization -> {
                 navController.get().navigate(
                     RegistrationFragmentDirections.fromRegisterToAuth()
@@ -37,9 +30,4 @@ internal class RegistrationNavigationImpl @Inject constructor(
         }
     }
 
-//    companion object {
-//        private fun Feature2To3Args.toFeature3Args(): Feature3Args = Feature3Args(
-//            value = "$someArg2 : $someArg1"
-//        )
-//    }
 }

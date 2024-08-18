@@ -65,8 +65,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-295" />
-                            <option name="y" value="395" />
+                            <option name="x" value="-414" />
+                            <option name="y" value="415" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -82,6 +82,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="profileEditFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-210" />
+                            <option name="y" value="327" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

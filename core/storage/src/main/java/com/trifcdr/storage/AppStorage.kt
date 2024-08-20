@@ -15,6 +15,8 @@ interface AppStorage {
 
     suspend fun saveUserData(data: UserData): Boolean
 
+    suspend fun clearUserData(): Boolean
+
     suspend fun getUserData(): UserData
 
     suspend fun isAuthorized(): Boolean

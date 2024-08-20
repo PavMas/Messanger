@@ -8,4 +8,6 @@ interface ProfileDirections {
     data class ToProfileEdit(val profileEditArgs: ProfileToEditArgs): ProfileDirections
 
     data object ToProfile: ProfileDirections
+
+    data object ToAuthorization: ProfileDirections
 }

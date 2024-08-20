@@ -28,10 +28,13 @@ class AuthorizationRepositoryImpl @Inject constructor(
         val checkCodeModel = CheckCodeRequestModel(phone, code)
         return try {
             val res = api.checkAuthCode(checkCodeModel)
-            storage.saveTokens(
-                accessToken = res.accessToken,
-                refreshToken = res.refreshToken
-            )
+            if (res.accessToken != null && res.refreshToken != null){
+                storage.saveTokens(
+                    accessToken = res.accessToken!!,
+                    refreshToken = res.refreshToken!!
+                )
+            }
+            storage.clearUserData()
             DomainResource.Success(mapAuthDataToDomain(res))
         } catch (error: HttpException) {
             if (error.code() == 404) {

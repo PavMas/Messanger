@@ -66,4 +66,8 @@ class ProfileRepositoryImpl @Inject constructor(
             DomainResource.Failure(e)
         }
     }
+
+    override suspend fun logout(): Boolean {
+        return storage.clearUserData()
+    }
 }

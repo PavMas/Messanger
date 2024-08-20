@@ -2,9 +2,11 @@ package com.trifcdr.navigationimpl.di
 
 import androidx.navigation.NavController
 import com.trifcdr.authorization.navigation.AuthorizationDirections
+import com.trifcdr.chats.navigation.ChatsDirections
 import com.trifcdr.navigationapi.NavigationApi
 import com.trifcdr.navigationimpl.NavigationActivityProvider
 import com.trifcdr.navigationimpl.navigatiomnapis.AuthorizationNavigationImpl
+import com.trifcdr.navigationimpl.navigatiomnapis.ChatsNavigationImpl
 import com.trifcdr.navigationimpl.navigatiomnapis.ProfileNavigationImpl
 import com.trifcdr.navigationimpl.navigatiomnapis.RegistrationNavigationImpl
 import com.trifcdr.profile.navigation.ProfileDirections
@@ -38,6 +40,9 @@ internal class NavigationModuleImpl {
 
         @Binds
         fun bindProfileNavigationApi(api: ProfileNavigationImpl): NavigationApi<ProfileDirections>
+
+        @Binds
+        fun bindChatsNavigationApi(api: ChatsNavigationImpl): NavigationApi<ChatsDirections>
 //
 //        @Binds
 //        fun bindFeature3NavigationApi(api: Feature3NavigationImpl): NavigationApi<Feature3Directions>

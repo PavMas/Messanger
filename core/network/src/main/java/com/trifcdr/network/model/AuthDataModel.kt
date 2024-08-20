@@ -8,11 +8,11 @@ import javax.inject.Named
 @Serializable
 data class AuthDataModel(
     @SerialName("refresh_token")
-    val refreshToken: String,
+    val refreshToken: String? = null,
     @SerialName("access_token")
-    val accessToken: String,
+    val accessToken: String? = null,
     @SerialName("user_id")
-    val userId: Long,
+    val userId: Long? = null,
     @SerialName("is_user_exists")
     val isUserExist: Boolean
 )

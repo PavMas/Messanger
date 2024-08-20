@@ -7,6 +7,7 @@ import javax.inject.Named
  * Created by trifcdr.
  */
 
+@Serializable
 data class RegisterUserRequestModule(
     val phone: String,
     val name: String,

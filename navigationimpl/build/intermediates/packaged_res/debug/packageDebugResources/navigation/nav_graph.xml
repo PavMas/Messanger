@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/chatsFragment"
-        android:name="com.trifcdr.chats.ChatsFragment"
+        android:name="com.trifcdr.chats.fragment.ChatsFragment"
         android:label="ChatsFragment"
         tools:layout="@layout/fragment_chats">
         <action

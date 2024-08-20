@@ -27,6 +27,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.trifcdr.domain.models.Avatar
 import com.trifcdr.domain.models.DomainResource
 import com.trifcdr.domain.models.ProfileDataRequest
@@ -39,7 +40,11 @@ import com.trifcdr.profile.navigation.ProfileEditArgs
 import com.trifcdr.profile.viewmodel.ProfileViewModel
 import com.trifcdr.profile.viewmodel.ProfileViewModuleFactory
 import java.io.ByteArrayOutputStream
+import java.text.SimpleDateFormat
 import java.util.Base64
+import java.util.Calendar
+import java.util.Locale
+import java.util.TimeZone
 import javax.inject.Inject
 
 
@@ -122,6 +127,20 @@ class ProfileEditFragment : Fragment() {
         uploadAvatar.setOnClickListener {
             showImagePicDialog()
         }
+        birthday.setOnClickListener {
+            val materialDatePickerBuilder: MaterialDatePicker.Builder<*> =
+                MaterialDatePicker.Builder
+                    .datePicker()
+                    .setTitleText(getString(R.string.select_birthday_date))
+            val materialDatePicker = materialDatePickerBuilder.build()
+            materialDatePicker.show(childFragmentManager, "MATERIAL_DATE_PICKER")
+            materialDatePicker.addOnPositiveButtonClickListener {
+                val utc = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+                utc.timeInMillis = materialDatePicker.selection as Long
+                val format = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                birthday.setText(format.format(utc.time))
+            }
+        }
         save.setOnClickListener {
             var avatar: Avatar? = null
             if (base64 != ""){
@@ -130,18 +149,23 @@ class ProfileEditFragment : Fragment() {
                     base64
                 )
             }
-            viewModel.updateUserData(
-                ProfileDataRequest(
-                    name = name.text.toString(),
-                    username = username.text.toString(),
-                    birthday = birthday.text.toString(),
-                    city = city.text.toString(),
-                    vk = vk.text.toString(),
-                    instagram = instagram.text.toString(),
-                    status = status.text.toString(),
-                    avatar = avatar
+            if(birthday.text.toString() == ""){
+                birthday.error = getString(R.string.field_necessarily)
+            }
+            else {
+                viewModel.updateUserData(
+                    ProfileDataRequest(
+                        name = name.text.toString(),
+                        username = username.text.toString(),
+                        birthday = birthday.text.toString(),
+                        city = city.text.toString(),
+                        vk = vk.text.toString(),
+                        instagram = instagram.text.toString(),
+                        status = status.text.toString(),
+                        avatar = avatar
+                    )
                 )
-            )
+            }
         }
     }
 

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@id/authorizationFragment"
-        android:title="Авторизация"/>
+        android:id="@id/chatsFragment"
+        android:icon="@drawable/baseline_chat_24"
+        android:title="@string/chats"/>
     <item
         android:id="@id/registrationFragment"
-        android:title="Регистрация"/>
-    <item
-        android:id="@id/chatsFragment"
-        android:title="Чаты"/>
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="@string/profile"/>
 
 </menu>

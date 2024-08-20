@@ -93,6 +93,36 @@ class AppStorageImpl(context: Context) : AppStorage {
         return true
     }
 
+    override suspend fun clearUserData(): Boolean {
+        CoroutineScope(Dispatchers.IO).launch {
+            val isAuthorizedKey = stringPreferencesKey(IS_AUTHORIZED)
+            val idKey = stringPreferencesKey(ID)
+            val nameKey = stringPreferencesKey(NAME)
+            val phoneKey = stringPreferencesKey(PHONE)
+            val usernameKey = stringPreferencesKey(USERNAME)
+            val city = stringPreferencesKey(CITY)
+            val birthday = stringPreferencesKey(BIRTHDAY)
+            val vk = stringPreferencesKey(VK)
+            val inst = stringPreferencesKey(INSTAGRAM)
+            val status = stringPreferencesKey(STATUS)
+            val avatar = stringPreferencesKey(AVATAR)
+            dataStore.edit { settings ->
+                settings.remove(idKey)
+                settings.remove(nameKey)
+                settings.remove(usernameKey)
+                settings.remove(phoneKey)
+                settings.remove(city)
+                settings.remove(birthday)
+                settings.remove(vk)
+                settings.remove(inst)
+                settings.remove(status)
+                settings.remove(avatar)
+                settings[isAuthorizedKey] = "false"
+            }
+        }.join()
+        return true
+    }
+
     override suspend fun getUserData(): UserData {
         var res: UserData? = null
         CoroutineScope(Dispatchers.IO).launch {

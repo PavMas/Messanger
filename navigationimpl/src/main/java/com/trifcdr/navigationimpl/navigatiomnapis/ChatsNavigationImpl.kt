@@ -1,7 +1,7 @@
 package com.trifcdr.navigationimpl.navigatiomnapis
 
 import androidx.navigation.NavController
-import com.trifcdr.chats.ChatsFragmentDirections
+import com.trifcdr.chats.fragment.ChatsFragmentDirections
 import com.trifcdr.chats.navigation.ChatsDirections
 import com.trifcdr.navigationapi.NavigationApi
 import javax.inject.Inject

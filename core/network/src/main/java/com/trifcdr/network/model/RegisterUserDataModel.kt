@@ -1,7 +1,7 @@
 package com.trifcdr.network.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import javax.inject.Named
 
 /**
  * Created by trifcdr.
@@ -9,10 +9,10 @@ import javax.inject.Named
 
 @Serializable
 data class RegisterUserDataModel(
-    @Named("access_token")
+    @SerialName("access_token")
     val accessToken: String,
-    @Named("refresh_token")
+    @SerialName("refresh_token")
     val refreshToken: String,
-    @Named("user_id")
+    @SerialName("user_id")
     val userId: Long
 )

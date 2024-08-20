@@ -69,12 +69,12 @@ fun mapUserDataToStorage(res: ProfileDataModel): UserData{
         id = data.id,
         name = data.name,
         username = data.username,
-        city = data.city!!,
-        birthday = data.birthday!!,
+        city = data.city,
+        birthday = data.birthday,
         phone = data.phone,
-        vk = data.vk!!,
-        instagram = data.instagram!!,
-        status = data.status!!,
+        vk = data.vk,
+        instagram = data.instagram,
+        status = data.status,
         avatar = data.avatar ?: ""
     )
 }

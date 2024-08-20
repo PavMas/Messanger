@@ -1,8 +1,7 @@
 package com.trifcdr.chats.di
 
-import com.trifcdr.chats.ChatsFragment
+import com.trifcdr.chats.fragment.ChatsFragment
 import com.trifcdr.di.BaseApi
-import dagger.Component
 
 /**
  * Created by trifcdr.

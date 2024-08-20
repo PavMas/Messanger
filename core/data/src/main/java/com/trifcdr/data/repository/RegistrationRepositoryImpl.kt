@@ -1,5 +1,6 @@
 package com.trifcdr.data.repository
 
+import android.util.Log
 import com.trifcdr.data.mapper.mapAuthDataToDomain
 import com.trifcdr.data.mapper.mapRegisterDataToDomain
 import com.trifcdr.data.mapper.mapRegisterUserToData
@@ -30,7 +31,8 @@ class RegistrationRepositoryImpl @Inject constructor(
             )
             DomainResource.Success(mapRegisterDataToDomain(res))
         } catch (error: Exception) {
-                DomainResource.Failure(Exception())
+                Log.d("reg error", error.toString())
+                DomainResource.Failure(error)
             }
         }
 

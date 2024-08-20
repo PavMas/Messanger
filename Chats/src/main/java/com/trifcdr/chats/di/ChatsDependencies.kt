@@ -1,5 +1,6 @@
 package com.trifcdr.chats.di
 
+import android.content.Context
 import com.trifcdr.chats.navigation.ChatsDirections
 import com.trifcdr.di.BaseDependencies
 import com.trifcdr.navigationapi.NavigationApi
@@ -10,5 +11,7 @@ import com.trifcdr.navigationapi.NavigationApi
 interface ChatsDependencies: BaseDependencies{
 
     val navigationApi: NavigationApi<ChatsDirections>
+
+    val context: Context
 
 }

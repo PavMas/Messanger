@@ -3,9 +3,11 @@ package com.trifcdr.data.di
 import android.content.Context
 import com.trifcdr.data.repository.ApiServiceRepositoryImpl
 import com.trifcdr.data.repository.AuthorizationRepositoryImpl
+import com.trifcdr.data.repository.ChatsRepositoryImpl
 import com.trifcdr.data.repository.ProfileRepositoryImpl
 import com.trifcdr.data.repository.RegistrationRepositoryImpl
 import com.trifcdr.domain.repository.AuthorizationRepository
+import com.trifcdr.domain.repository.ChatsRepository
 import com.trifcdr.domain.repository.ProfileRepository
 import com.trifcdr.domain.repository.RegistrationRepository
 import com.trifcdr.network.repository.ApiServiceRepository
@@ -43,6 +45,15 @@ class DataModule {
     ): RegistrationRepository {
         return RegistrationRepositoryImpl(
             plannerokApi,
+            appStorage
+        )
+    }
+
+    @Provides
+    fun provideChatsRepository(
+        appStorage: AppStorage
+    ): ChatsRepository {
+        return ChatsRepositoryImpl(
             appStorage
         )
     }

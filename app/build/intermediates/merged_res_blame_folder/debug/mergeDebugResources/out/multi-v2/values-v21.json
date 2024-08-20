@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-59:/values-v21/values-v21.xml",
+            "outputFile": "com.trifcdr.messanger.app-mergeDebugResources-61:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\af63d8b29779f6f92b2fa94b4d9f04fd\\transformed\\appcompat-1.6.1\\res\\values-v21\\values-v21.xml",

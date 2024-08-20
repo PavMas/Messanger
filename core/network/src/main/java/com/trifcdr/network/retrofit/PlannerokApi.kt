@@ -60,7 +60,8 @@ interface PlannerokApi {
                     .build()
 
                 val contentType = "application/json".toMediaType()
-                val json = Json { ignoreUnknownKeys = true }
+                val json = Json { ignoreUnknownKeys = true
+                explicitNulls = false}
                 val kotlinxConverterFactory = json.asConverterFactory(contentType)
                 val retrofit = Retrofit.Builder()
                     .baseUrl("https://plannerok.ru/")

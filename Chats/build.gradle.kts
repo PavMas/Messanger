@@ -32,6 +32,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures{
+        dataBinding = true
         viewBinding = true
     }
 }
@@ -45,10 +46,17 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    kapt(libs.compiler)
+
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 
     implementation(project(":di"))
+    implementation(project(":domain"))
     implementation(project(":navigationapi"))
-    implementation(project(":common"))
+    implementation(project(":core:data"))
+    implementation(project(":core:network"))
+    implementation(project(":core:storage"))
 }

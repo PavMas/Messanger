@@ -13,4 +13,6 @@ interface ProfileRepository {
 
     suspend fun updateProfileData(data: ProfileDataRequest): DomainResource<Boolean>
 
+    suspend fun logout(): Boolean
+
 }

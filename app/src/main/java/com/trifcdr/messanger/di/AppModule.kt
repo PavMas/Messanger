@@ -3,6 +3,8 @@ package com.trifcdr.messanger.di
 import android.content.Context
 import com.trifcdr.authorization.di.AuthorizationDependencies
 import com.trifcdr.authorization.navigation.AuthorizationDirections
+import com.trifcdr.chats.di.ChatsDependencies
+import com.trifcdr.chats.navigation.ChatsDirections
 import com.trifcdr.navigationapi.NavigationApi
 import com.trifcdr.navigationimpl.NavigationActivityProvider
 import com.trifcdr.navigationimpl.di.NavigationComponentHolderImpl
@@ -47,6 +49,14 @@ internal class AppModule {
         object : ProfileDependencies {
             override val navigationApi: NavigationApi<ProfileDirections> =
                 NavigationComponentHolderImpl.get().profileNavigationApi
+            override val context: Context = context
+        }
+
+    @Provides
+    fun provideChatsDependencies(context: Context): ChatsDependencies =
+        object : ChatsDependencies {
+            override val navigationApi: NavigationApi<ChatsDirections> =
+                NavigationComponentHolderImpl.get().chatsNavigationApi
             override val context: Context = context
         }
 }

@@ -5,7 +5,7 @@
         android:icon="@drawable/baseline_chat_24"
         android:title="@string/chats"/>
     <item
-        android:id="@id/registrationFragment"
+        android:id="@id/profileFragment"
         android:icon="@drawable/baseline_account_circle_24"
         android:title="@string/profile"/>
 

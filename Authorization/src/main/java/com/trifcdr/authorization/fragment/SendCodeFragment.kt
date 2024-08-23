@@ -10,9 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hbb20.CountryCodePicker
+import com.trifcdr.authorization.R
 import com.trifcdr.authorization.databinding.FragmentAuthorizationBinding
 import com.trifcdr.authorization.di.AuthorizationComponentHolder
 import com.trifcdr.authorization.navigation.AuthorizationDirections
@@ -68,8 +70,12 @@ class SendCodeFragment : Fragment() {
 
     private fun setCodeObserver() {
         viewModel.resultSendCode.observe(viewLifecycleOwner) { sendCodeResult ->
+            binding.progressIndicator.visibility = View.GONE
             if (sendCodeResult is DomainResource.Success) {
                 navigationApi.navigate(AuthorizationDirections.ToCodeCheck(getCheckCodeArgs()))
+            }
+            else{
+                Toast.makeText(context, getString(R.string.error), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -80,6 +86,7 @@ class SendCodeFragment : Fragment() {
 
     private fun setClickListeners() {
         getCode.setOnClickListener {
+            binding.progressIndicator.visibility = View.VISIBLE
             viewModel.sendAuthCode(getNumber())
         }
     }

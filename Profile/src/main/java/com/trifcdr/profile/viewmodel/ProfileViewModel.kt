@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.trifcdr.domain.models.DomainResource
 import com.trifcdr.domain.models.ProfileData
 import com.trifcdr.domain.models.ProfileDataRequest
+import com.trifcdr.domain.usecase.CheckAuthorizedUseCase
 import com.trifcdr.domain.usecase.GetProfileDataUseCase
 import com.trifcdr.domain.usecase.LogOutUseCase
 import com.trifcdr.domain.usecase.UpdateUserDataUseCase
@@ -20,8 +21,9 @@ import javax.inject.Inject
 class ProfileViewModel @Inject constructor(
     private val getProfileDataUseCase: GetProfileDataUseCase,
     private val updateUserDataUseCase: UpdateUserDataUseCase,
-    private val logOutUseCase: LogOutUseCase
-): ViewModel() {
+    private val logOutUseCase: LogOutUseCase,
+    private val checkAuthorizedUseCase: CheckAuthorizedUseCase
+) : ViewModel() {
     private val resultProfileDataMutable = MutableLiveData<DomainResource<ProfileData>>()
     val resultProfileData: LiveData<DomainResource<ProfileData>>
         get() = resultProfileDataMutable
@@ -57,5 +59,17 @@ class ProfileViewModel @Inject constructor(
             res = logOutUseCase.execute()
         }.join()
         resultClearUserDataMutable.value = res
+    }
+
+    private val resultAuthMutable = MutableLiveData<Boolean>()
+    val resultAuth: LiveData<Boolean>
+        get() = resultAuthMutable
+
+    fun checkAuth() = viewModelScope.launch {
+        var res = false
+        viewModelScope.launch(Dispatchers.IO) {
+            res = checkAuthorizedUseCase.execute()
+        }.join()
+        resultAuthMutable.value = res
     }
 }

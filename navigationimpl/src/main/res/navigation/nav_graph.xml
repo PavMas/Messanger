@@ -60,6 +60,9 @@
         <action
             android:id="@+id/from_chats_to_auth"
             app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/from_chats_to_dialog"
+            app:destination="@id/dialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -79,6 +82,17 @@
         <argument
             android:name="profileData"
             app:argType="com.trifcdr.profile.navigation.ProfileEditArgs" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="com.trifcdr.chats.fragment.DialogFragment"
+        android:label="DialogFragment" >
+        <action
+            android:id="@+id/from_dialog_to_chats"
+            app:destination="@id/chatsFragment" />
+        <argument
+            android:name="id"
+            app:argType="com.trifcdr.chats.navigation.DialogArgs" />
     </fragment>
 
     <!--    <fragment-->

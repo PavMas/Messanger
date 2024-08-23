@@ -2,4 +2,5 @@
 <resources>
     <string name="uasername">Имя пользователя</string>
     <string name="last_message">Последнее сообщение</string>
+    <string name="message">Сообщение...</string>
 </resources>

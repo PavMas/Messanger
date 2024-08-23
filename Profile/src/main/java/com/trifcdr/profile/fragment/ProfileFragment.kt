@@ -68,6 +68,7 @@ class ProfileFragment: Fragment() {
 
     private fun setClickListeners() {
         logout.setOnClickListener {
+            binding.progressIndicator.visibility = View.VISIBLE
             viewModel.cleanUserData()
         }
     }
@@ -121,6 +122,7 @@ class ProfileFragment: Fragment() {
 
     private fun setProfileDataObserver() {
         viewModel.resultProfileData.observe(viewLifecycleOwner){ profileData ->
+            binding.progressIndicator.visibility = View.GONE
             if (profileData is DomainResource.Success){
                 val res = profileData.result
                 setSocialsClickListeners(res)
@@ -145,6 +147,9 @@ class ProfileFragment: Fragment() {
                     horoscope.text = getZodiac(res.birthday!!)
                 }
             }
+            else{
+                Toast.makeText(context, getString(R.string.retry_letter), Toast.LENGTH_SHORT).show()
+            }
         }
 
         viewModel.resultClearUserData.observe(viewLifecycleOwner){ res ->
@@ -153,6 +158,12 @@ class ProfileFragment: Fragment() {
             }
             else{
                 Toast.makeText(context, getString(R.string.retry_letter), Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        viewModel.resultAuth.observe(viewLifecycleOwner){ res->
+            if (!res){
+                navigationApi.navigate(ProfileDirections.ToAuthorization)
             }
         }
     }
@@ -190,6 +201,7 @@ class ProfileFragment: Fragment() {
 
     private fun init() {
         viewModel = ViewModelProvider(this, profileViewModelFactory)[ProfileViewModel::class]
+        viewModel.checkAuth()
         nickname = binding.nickname
         vk = binding.vk
         inst = binding.inst
@@ -200,6 +212,7 @@ class ProfileFragment: Fragment() {
         birthday = binding.birthday
         horoscope = binding.horoscope
         logout = binding.logout
+        binding.progressIndicator.visibility = View.VISIBLE
         viewModel.getProfileData()
     }
 

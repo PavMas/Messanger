@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+drawable baseline_account_circle_24
+drawable baseline_chat_24
 id action_authorizationFragment_to_profileFragment
 id authorizationFragment
 id bottomNavigationView
@@ -22,3 +24,5 @@ id registrationFragment
 layout fragment_navigation
 menu bottom_nav_menu
 navigation nav_graph
+string chats
+string profile

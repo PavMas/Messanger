@@ -5,6 +5,8 @@ package com.trifcdr.chats.navigation
  */
 sealed interface ChatsDirections {
 
-    object ToAuthorization : ChatsDirections
+    data object ToAuthorization : ChatsDirections
+
+    data class ToDialog(val args: ChatsToDialogArgs): ChatsDirections
 
 }

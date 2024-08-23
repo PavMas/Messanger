@@ -1,29 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.trifcdr.navigationimpl.test.navigationimpl-mergeDebugAndroidTestResources-62:/values-v28/values-v28.xml",
+            "outputFile": "com.trifcdr.navigationimpl.test.navigationimpl-mergeDebugAndroidTestResources-65:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\afaf4e890dca67094b9f62cb253adbb0\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
-                    "from": {
-                        "startLines": "2,3,4,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,397",
-                        "endLines": "2,3,7,11",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,392,584"
-                    },
-                    "to": {
-                        "startLines": "14,15,16,20",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "1142,1217,1304,1484",
-                        "endLines": "14,15,19,23",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "1212,1299,1479,1671"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\e5bf795a4c06df69238a08896b165bec\\transformed\\material-1.11.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\a115b37b88fc7fadab34c135166049ae\\transformed\\material-1.11.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +23,26 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\e84b7fa8281ac7d020a757edbc7e633b\\transformed\\jetified-core-1.5.0\\res\\values-v28\\values.xml",
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\af63d8b29779f6f92b2fa94b4d9f04fd\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,397",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,392,584"
+                    },
+                    "to": {
+                        "startLines": "14,15,16,20",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "1142,1217,1304,1484",
+                        "endLines": "14,15,19,23",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "1212,1299,1479,1671"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pasha\\.gradle\\caches\\transforms-4\\11c63c62f39b60e6e021881cbab37f6d\\transformed\\jetified-core-1.5.0\\res\\values-v28\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",

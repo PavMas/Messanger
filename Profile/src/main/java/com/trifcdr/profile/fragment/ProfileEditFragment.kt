@@ -117,8 +117,12 @@ class ProfileEditFragment : Fragment() {
 
     private fun setUpdateProfileDataObserver() {
         viewModel.resultUpdateUserData.observe(viewLifecycleOwner) { result ->
+            binding.progressIndicator.visibility = View.GONE
             if (result is DomainResource.Success) {
                 navigationApi.navigate(ProfileDirections.ToProfile)
+            }
+            else{
+                Toast.makeText(context, getString(R.string.error), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -142,6 +146,7 @@ class ProfileEditFragment : Fragment() {
             }
         }
         save.setOnClickListener {
+            binding.progressIndicator.visibility = View.VISIBLE
             var avatar: Avatar? = null
             if (base64 != ""){
                 avatar = Avatar(

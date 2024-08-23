@@ -18,8 +18,10 @@ class ChatsViewModel @Inject constructor(
         get() = resultAuthMutable
 
     fun checkAuth() = viewModelScope.launch{
+        var res = false
         viewModelScope.launch(Dispatchers.IO){
-            resultAuthMutable.value = checkAuthorizedUseCase.execute()
-        }
+            res = checkAuthorizedUseCase.execute()
+        }.join()
+        resultAuthMutable.value = res
     }
 }

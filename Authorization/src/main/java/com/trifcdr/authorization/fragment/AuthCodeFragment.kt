@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.trifcdr.authorization.R
 import com.trifcdr.authorization.databinding.FragmentCodeBinding
 import com.trifcdr.authorization.di.AuthorizationComponentHolder
 import com.trifcdr.authorization.navigation.AuthorizationDirections
@@ -70,6 +71,7 @@ class AuthCodeFragment : Fragment() {
 
     private fun setCheckObserver() {
         viewModel.resultCheckCode.observe(viewLifecycleOwner){ checkCodeResult ->
+            binding.progressIndicator.visibility = View.GONE
             if (checkCodeResult is DomainResource.Success) {
                 if (!checkCodeResult.result.isUserExist){
                     navigationApi.navigate(AuthorizationDirections.ToRegistration(getRegistrationArgs()))
@@ -79,7 +81,7 @@ class AuthCodeFragment : Fragment() {
                 }
             }
             if (checkCodeResult is DomainResource.Failure){
-                Toast.makeText(context, checkCodeResult.exception.message, Toast.LENGTH_LONG).show()
+                Toast.makeText(context, getString(R.string.wrong_code), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -127,7 +129,11 @@ class AuthCodeFragment : Fragment() {
                     digit5.text.toString() +
                     digit6.text.toString()
             if (res.length == 6) {
+                binding.progressIndicator.visibility = View.VISIBLE
                 viewModel.checkAuthCode(args.phone, res)
+            }
+            else{
+                Toast.makeText(context, getString(R.string.wrong_code), Toast.LENGTH_SHORT).show()
             }
         }
     }

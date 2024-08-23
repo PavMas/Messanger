@@ -3,4 +3,6 @@
     <string name="phone_hint">Номер телефона</string>
     <string name="get_code">Получить код</string>
     <string name="check_code">Проверить</string>
+    <string name="wrong_code">Код введен неверно</string>
+    <string name="error">Ошибка. Повторите попытку позже</string>
 </resources>

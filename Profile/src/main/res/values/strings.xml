@@ -37,4 +37,5 @@
     <string name="libra">Весы</string>
     <string name="scorpio">Скорпион</string>
     <string name="sagittarius">Стрелец</string>
+    <string name="error">Произошла ошибка. Повторите попытку позже</string>
 </resources>

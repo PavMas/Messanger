@@ -28,10 +28,6 @@
         "source": "com.trifcdr.messanger.app-main-65:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.trifcdr.messanger.app-debug-63:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.trifcdr.messanger.app-main-65:/menu/bottom_nav_menu.xml"
-    },
-    {
         "merged": "com.trifcdr.messanger.app-debug-63:/mipmap-anydpi_ic_launcher_round.xml.flat",
         "source": "com.trifcdr.messanger.app-main-65:/mipmap-anydpi/ic_launcher_round.xml"
     },

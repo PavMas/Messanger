@@ -10,7 +10,7 @@ import dagger.Component
 
 @Component(
     dependencies = [ChatsDependencies::class],
-    modules = [ViewModelModule::class, DataModule::class]
+    modules = [ViewModelModule::class, DataModule::class, ChatsModule::class]
 )
 interface ChatsComponent: ChatsApi {
 
